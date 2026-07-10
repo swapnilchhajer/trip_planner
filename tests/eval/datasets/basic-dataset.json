@@ -1,0 +1,32 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "greeting",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Hello, what can you help me with?"}]
+      }
+    },
+    {
+      "eval_case_id": "paris_trip",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Plan a 5-day trip to Paris starting from London, with a mid-range budget."}]
+      }
+    },
+    {
+      "eval_case_id": "tokyo_trip",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I want to go to Tokyo from New York for 7 days. Can you suggest transportation, sights, and estimate luxury pricing?"}]
+      }
+    },
+    {
+      "eval_case_id": "japan_budget",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Help me plan a budget-friendly 10-day trip to Japan."}]
+      }
+    }
+  ]
+}

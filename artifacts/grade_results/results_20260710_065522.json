@@ -1,0 +1,2005 @@
+{
+  "eval_case_results": [
+    {
+      "eval_case_index": 0,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's response is excellent. It perfectly addresses the user's general query by clearly introducing itself as an 'expert trip planner' and explicitly listing the specific services it can provide, which align directly with its defined capabilities (tools like `get_places_to_visit`, `get_transportation_options`, `get_overall_pricing_estimate`). The response is well-structured using bullet points and then proactively guides the user on what information is needed to start planning, adhering to its instruction to 'politely ask for clarification'. The tone is helpful and engaging, making it a comprehensive and flawless initial interaction.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 1,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent provided an excellent, comprehensive, and well-structured response that flawlessly addresses all aspects of the user's prompt. It successfully leveraged all three relevant tools (`get_places_to_visit`, `get_transportation_options`, `get_overall_pricing_estimate`) and synthesized the information into a detailed and coherent trip plan.\n\nHere's a breakdown of the strengths:\n1.  **Clear Transportation Options:** It correctly identified Eurostar as the primary mid-range option from London to Paris, providing accurate details on duration and cost, along with alternative modes like flights and express buses.\n2.  **Detailed Mid-Range Budget:** The response presented a clear and realistic 5-day mid-range budget breakdown, including accommodation, meals, sightseeing, local transport, and contingency, directly reflecting the tool's output.\n3.  **Comprehensive Itinerary:** The 5-day itinerary is well-planned, logical, and covers major Parisian landmarks and activities suitable for a first-time visitor on a mid-range budget. It effectively integrates suggestions from the `get_places_to_visit` tool and structures them chronologically.\n4.  **Practical Expert Tips:** The inclusion of practical tips like the Paris Museum Pass, Metro usage, and 'Formule' menus significantly enhances the utility of the response.\n5.  **Excellent Structure and Engagement:** The response is highly readable with clear headings, bullet points, and a welcoming tone, making it easy for the user to understand and follow.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 2,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 4.0,
+              "explanation": "The agent provided a well-structured and comprehensive 7-day luxury itinerary for Tokyo, including relevant sights and activities. The transportation suggestions from New York to Tokyo were accurate for luxury travel, and the local transportation advice was also appropriate. The agent effectively filtered out irrelevant transportation options from the tool output. The overall structure, prose, and additional pro-tips are excellent.\n\nThe main area for improvement lies in the 'Luxury Pricing Estimate'. While the agent correctly identified that the tool's 'luxury' accommodation estimate ($280/night) was significantly lower than true 5-star luxury hotels in Tokyo, and added a crucial note about hotels starting at $800\u2013$1,200 per night, the primary pricing table still reflects the lower (and somewhat misleading for 'luxury') figures. This creates a discrepancy between the main estimate and the true cost of luxury, requiring the user to recalculate. Had the agent adjusted the main table's numbers to reflect actual luxury costs, or presented a more realistic range upfront, the response would have been perfect.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 3,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent provided an excellent, comprehensive, and well-structured plan for a budget-friendly 10-day trip to Japan. It intelligently used the available tools and supplemented the tool outputs with expert knowledge.\n\n**Strengths:**\n- **Directly addresses the prompt:** Fully covers 'budget-friendly,' '10-day,' and 'Japan.'\n- **Comprehensive Budget Breakdown:** Provides a clear budget estimate and a detailed breakdown for accommodation, food, transport, and activities, explicitly stating the exclusion of international flights and the 'budget travel style' assumed. The numbers provided by the `get_overall_pricing_estimate` tool are integrated perfectly.\n- **Structured Itinerary:** Offers a logical 10-day itinerary covering popular destinations like Tokyo, Mount Fuji/Hakone, Kyoto/Nara, and Hiroshima, complete with 'Must See' attractions and 'Budget Tips' for each section.\n- **Relevant Transportation Information:** Clearly differentiates between international flight estimates (using the inferred origin 'San Francisco' from `get_transportation_options`) and internal travel options, emphasizing budget-friendly choices like express buses and local trains.\n- **Expert Tips:** Includes practical, actionable advice for budget travelers (e.g., 'Konbini' meals, Suica/Pasmo card, vending machines).\n- **Intelligent Tool Usage & Synthesis:** The agent correctly inferred 'budget' travel style and '10 days'. It also smartly disregarded irrelevant transportation options from the `get_transportation_options` tool (e.g., train/bus from San Francisco to Tokyo) and instead provided general, highly relevant internal travel advice for Japan.\n- **Clarity and Engagement:** The response is well-formatted, easy to read, and uses an engaging tone.\n- **Proactive Follow-up:** Asks a helpful follow-up question to refine the plan further, demonstrating a willingness to continue assisting.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "summary_metrics": [
+    {
+      "metric_name": "custom_response_quality",
+      "num_cases_total": 4,
+      "num_cases_valid": 4,
+      "num_cases_error": 0,
+      "mean_score": 4.75,
+      "stdev_score": 0.5,
+      "pass_rate": null
+    }
+  ],
+  "win_rates": null,
+  "evaluation_dataset": [
+    {
+      "bigquery_source": null,
+      "gcs_source": null,
+      "eval_cases": [
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Hello, what can you help me with?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Hello! I'm your expert trip planner, and I'm here to help you design the perfect getaway. Whether you have a specific destination in mind or are just looking for inspiration, I can assist you with:\n\n*   **Top Places to Visit:** I can suggest the best sights, attractions, and hidden gems in any city or country.\n*   **Transportation Options:** I can find the best ways to get from your home to your destination, whether by plane, train, or car.\n*   **Budget & Pricing Estimates:** I can provide an estimated cost for your trip based on your travel style\u2014whether you're looking for a budget-friendly adventure, a mid-range experience, or a luxury vacation.\n*   **Personalized Itineraries:** I can synthesize all this information into a structured and engaging travel guide just for you.\n\nTo get started, just tell me:\n1.  **Where** would you like to go?\n2.  **Where** are you traveling from?\n3.  **How many days** do you plan to stay?\n4.  What is your **travel style** (budget, mid-range, or luxury)?\n\nWhere should we start planning your next adventure?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "greeting",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "root_agent": {
+                "agent_id": "root_agent",
+                "agent_type": "LlmAgent",
+                "description": "A helpful assistant that plans trips with itineraries, transportation options, and budget/pricing estimates.",
+                "instruction": "You are an expert trip planner. Your job is to help users plan amazing trips to their desired destinations.\nWhen a user provides a destination, origin, number of days, and/or travel preferences:\n1. Suggest top places to visit using the 'get_places_to_visit' tool.\n2. Provide possible transportation options from their origin or general travel options using the 'get_transportation_options' tool.\n3. Offer an overall pricing estimate for their trip based on the destination, duration, and travel style (budget, mid-range, or luxury) using the 'get_overall_pricing_estimate' tool.\n\nSynthesize all this information into a beautifully structured, engaging, and professional travel itinerary and guide.\nIf the user's query is simple or lacks details (like origin or travel style), politely ask for clarification or use sensible defaults/guesses while letting them know.\nYou can also use 'get_current_time' if the user asks about the time in a city.",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns the current time in a specified city.",
+                        "name": "get_current_time",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "city": {
+                              "title": "City",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "city"
+                          ],
+                          "title": "get_current_timeParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns a list of top places to visit in a specified destination (city, country, or region).\n\nArgs:\n    destination: The name of the destination, city, or country to visit.\n\nReturns:\n    A dictionary containing the destination and a list of places to visit, each with details.",
+                        "name": "get_places_to_visit",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "destination"
+                          ],
+                          "title": "get_places_to_visitParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns a list of possible transportation options between the origin and destination.\n\nArgs:\n    origin: The starting location of the trip.\n    destination: The destination city, country, or place.\n\nReturns:\n    A dictionary with status, origin, destination, and details of possible transportation options.",
+                        "name": "get_transportation_options",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "origin": {
+                              "title": "Origin",
+                              "type": "string"
+                            },
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "origin",
+                            "destination"
+                          ],
+                          "title": "get_transportation_optionsParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Estimates overall pricing and budget breakdown for a trip of a given number of days to a destination.\n\nArgs:\n    destination: The destination city, country, or place.\n    days: The duration of the trip in days.\n    travel_style: The style of travel. Choose from 'budget', 'mid-range', or 'luxury'.\n\nReturns:\n    A dictionary containing the pricing breakdown, daily average cost, and total estimated budget.",
+                        "name": "get_overall_pricing_estimate",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            },
+                            "days": {
+                              "title": "Days",
+                              "type": "integer"
+                            },
+                            "travel_style": {
+                              "title": "Travel Style",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "destination",
+                            "days",
+                            "travel_style"
+                          ],
+                          "title": "get_overall_pricing_estimateParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "root_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Hello! I'm your expert trip planner, and I'm here to help you design the perfect getaway. Whether you have a specific destination in mind or are just looking for inspiration, I can assist you with:\n\n*   **Top Places to Visit:** I can suggest the best sights, attractions, and hidden gems in any city or country.\n*   **Transportation Options:** I can find the best ways to get from your home to your destination, whether by plane, train, or car.\n*   **Budget & Pricing Estimates:** I can provide an estimated cost for your trip based on your travel style\u2014whether you're looking for a budget-friendly adventure, a mid-range experience, or a luxury vacation.\n*   **Personalized Itineraries:** I can synthesize all this information into a structured and engaging travel guide just for you.\n\nTo get started, just tell me:\n1.  **Where** would you like to go?\n2.  **Where** are you traveling from?\n3.  **How many days** do you plan to stay?\n4.  What is your **travel style** (budget, mid-range, or luxury)?\n\nWhere should we start planning your next adventure?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Plan a 5-day trip to Paris starting from London, with a mid-range budget.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Bonjour! Planning a 5-day escape from London to the \"City of Light\" is a fantastic choice. Paris is a blend of world-class art, iconic architecture, and unparalleled culinary experiences. Here is your comprehensive mid-range travel guide and itinerary.\n\n---\n\n### **1. Getting from London to Paris**\nSince you are starting in London, you have several convenient options. For a mid-range budget, the **Eurostar (Train)** is often the best balance of speed, cost, and comfort.\n\n*   **Train (Eurostar):** The fastest and most convenient way. Departing from St Pancras International, you'll arrive at Gare du Nord in about **2.5 hours**.\n    *   *Price:* $50 - $150 USD (Book in advance for the best rates).\n*   **Flight:** Frequent flights from London airports (LHR, LGW, LCY) to Paris (CDG, ORY).\n    *   *Price:* $150 - $800 USD (Round-trip).\n*   **Express Bus:** The most budget-friendly option, taking around 7-9 hours via the ferry or Channel Tunnel.\n    *   *Price:* $25 - $60 USD.\n\n---\n\n### **2. Estimated 5-Day Budget (Mid-Range)**\nFor a mid-range style, you can expect comfortable 3-star accommodations, a mix of bistro dining and casual eats, and entry into major attractions.\n\n*   **Total Estimated Budget:** **$836 USD** per person.\n*   **Daily Average:** ~$167 USD.\n\n**Breakdown:**\n*   **Accommodation:** $360 (4 nights at ~$90/night).\n*   **Meals & Food:** $200 ($40/day for great croissants, lunches, and dinner).\n*   **Sightseeing:** $125 (Museum passes and attraction tickets).\n*   **Local Transport:** $75 (Metro/RER and occasional taxis).\n*   **Contingency:** $76.\n\n---\n\n### **3. Suggested 5-Day Itinerary**\n\n#### **Day 1: Arrival & The Icons**\n*   **Morning:** Arrive at Gare du Nord, check into your hotel, and grab a quick lunch.\n*   **Afternoon:** Visit the **Eiffel Tower**. Be sure to book tickets in advance to head to the summit for panoramic views.\n*   **Evening:** Enjoy a **Seine River Cruise** at sunset to see the city landmarks illuminated.\n\n#### **Day 2: Art & History**\n*   **Morning:** Spend your morning at the **Louvre Museum**. Focus on the highlights like the Mona Lisa and Winged Victory (3-4 hours).\n*   **Afternoon:** Walk through the Tuileries Garden toward the Place de la Concorde.\n*   **Evening:** Explore the Latin Quarter for dinner\u2014it's full of lively, mid-range bistros.\n\n#### **Day 3: Gothic Splendor & Island Wandering**\n*   **Morning:** Visit the **Notre-Dame Cathedral** (enjoy the exterior and the archaeological crypt) and the nearby Sainte-Chapelle for its stunning stained glass.\n*   **Afternoon:** Wander the charming streets of **\u00cele Saint-Louis** and enjoy some famous Berthillon ice cream.\n*   **Evening:** Explore the Marais district, known for its historic architecture and trendy boutiques.\n\n#### **Day 4: Luxury & Landmarks**\n*   **Morning:** Walk the famous **Champs-\u00c9lys\u00e9es**, shopping and soaking in the atmosphere.\n*   **Afternoon:** Reach the **Arc de Triomphe**. Climb to the top for a spectacular view of the twelve radiating avenues.\n*   **Evening:** Catch a cabaret show or enjoy a classic French meal in the 8th arrondissement.\n\n#### **Day 5: Montmartre & Departure**\n*   **Morning:** Head to the hilltop neighborhood of **Montmartre**. Visit the Sacr\u00e9-C\u0153ur Basilica and watch the artists in Place du Tertre.\n*   **Afternoon:** Enjoy a final French caf\u00e9 lunch before heading back to the station/airport for your return to London.\n\n---\n\n### **Expert Tips for Your Trip:**\n*   **The Paris Museum Pass:** If you plan on visiting many museums, consider buying a 4-day pass to save money and skip some lines.\n*   **Metro is Key:** Paris is very walkable, but the Metro is efficient and affordable. Buy a \"carnet\" of tickets or use a contactless card.\n*   **Dining:** Look for \"Formule\" menus at lunch (fixed-price 2 or 3-course meals), which offer incredible value for high-quality food.\n\nEnjoy your Parisian adventure! Would you like help looking for specific hotels or more dining recommendations?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "paris_trip",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "root_agent": {
+                "agent_id": "root_agent",
+                "agent_type": "LlmAgent",
+                "description": "A helpful assistant that plans trips with itineraries, transportation options, and budget/pricing estimates.",
+                "instruction": "You are an expert trip planner. Your job is to help users plan amazing trips to their desired destinations.\nWhen a user provides a destination, origin, number of days, and/or travel preferences:\n1. Suggest top places to visit using the 'get_places_to_visit' tool.\n2. Provide possible transportation options from their origin or general travel options using the 'get_transportation_options' tool.\n3. Offer an overall pricing estimate for their trip based on the destination, duration, and travel style (budget, mid-range, or luxury) using the 'get_overall_pricing_estimate' tool.\n\nSynthesize all this information into a beautifully structured, engaging, and professional travel itinerary and guide.\nIf the user's query is simple or lacks details (like origin or travel style), politely ask for clarification or use sensible defaults/guesses while letting them know.\nYou can also use 'get_current_time' if the user asks about the time in a city.",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns the current time in a specified city.",
+                        "name": "get_current_time",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "city": {
+                              "title": "City",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "city"
+                          ],
+                          "title": "get_current_timeParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns a list of top places to visit in a specified destination (city, country, or region).\n\nArgs:\n    destination: The name of the destination, city, or country to visit.\n\nReturns:\n    A dictionary containing the destination and a list of places to visit, each with details.",
+                        "name": "get_places_to_visit",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "destination"
+                          ],
+                          "title": "get_places_to_visitParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns a list of possible transportation options between the origin and destination.\n\nArgs:\n    origin: The starting location of the trip.\n    destination: The destination city, country, or place.\n\nReturns:\n    A dictionary with status, origin, destination, and details of possible transportation options.",
+                        "name": "get_transportation_options",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "origin": {
+                              "title": "Origin",
+                              "type": "string"
+                            },
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "origin",
+                            "destination"
+                          ],
+                          "title": "get_transportation_optionsParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Estimates overall pricing and budget breakdown for a trip of a given number of days to a destination.\n\nArgs:\n    destination: The destination city, country, or place.\n    days: The duration of the trip in days.\n    travel_style: The style of travel. Choose from 'budget', 'mid-range', or 'luxury'.\n\nReturns:\n    A dictionary containing the pricing breakdown, daily average cost, and total estimated budget.",
+                        "name": "get_overall_pricing_estimate",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            },
+                            "days": {
+                              "title": "Days",
+                              "type": "integer"
+                            },
+                            "travel_style": {
+                              "title": "Travel Style",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "destination",
+                            "days",
+                            "travel_style"
+                          ],
+                          "title": "get_overall_pricing_estimateParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "root_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "5mnfgdss",
+                            "args": {
+                              "destination": "Paris"
+                            },
+                            "name": "get_places_to_visit",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "7oa1d32q",
+                            "args": {
+                              "destination": "Paris",
+                              "origin": "London"
+                            },
+                            "name": "get_transportation_options",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "21hk94zj",
+                            "args": {
+                              "travel_style": "mid-range",
+                              "days": 5,
+                              "destination": "Paris"
+                            },
+                            "name": "get_overall_pricing_estimate",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "root_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "5mnfgdss",
+                            "name": "get_places_to_visit",
+                            "response": {
+                              "status": "success",
+                              "destination": "Paris",
+                              "places": [
+                                {
+                                  "name": "Eiffel Tower",
+                                  "description": "Iconic iron lattice tower on the Champ de Mars, offering panoramic city views.",
+                                  "category": "Landmark",
+                                  "recommended_duration": "2-3 hours"
+                                },
+                                {
+                                  "name": "Louvre Museum",
+                                  "description": "The world's largest art museum, home to the Mona Lisa and Venus de Milo.",
+                                  "category": "Museum / Culture",
+                                  "recommended_duration": "3-4 hours"
+                                },
+                                {
+                                  "name": "Notre-Dame Cathedral",
+                                  "description": "A masterpiece of French Gothic architecture, located on the \u00cele de la Cit\u00e9.",
+                                  "category": "Historical / Religious",
+                                  "recommended_duration": "1-2 hours"
+                                },
+                                {
+                                  "name": "Champs-\u00c9lys\u00e9es & Arc de Triomphe",
+                                  "description": "Famous avenue lined with shops and cafes, culminating at the monumental triumphal arch.",
+                                  "category": "Sightseeing",
+                                  "recommended_duration": "1-2 hours"
+                                },
+                                {
+                                  "name": "Seine River Cruise",
+                                  "description": "A scenic boat tour along the river Seine, passing under historic bridges.",
+                                  "category": "Activity",
+                                  "recommended_duration": "1 hour"
+                                }
+                              ]
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "7oa1d32q",
+                            "name": "get_transportation_options",
+                            "response": {
+                              "status": "success",
+                              "origin": "London",
+                              "destination": "Paris",
+                              "transportation_options": [
+                                {
+                                  "mode": "Flight",
+                                  "description": "Direct or connecting commercial flights from London to nearest airport to Paris.",
+                                  "estimated_duration": "2-12 hours depending on stops and route",
+                                  "price_range_usd": "150 - 800 (economy round-trip)",
+                                  "frequency": "Multiple daily options"
+                                },
+                                {
+                                  "mode": "Train",
+                                  "description": "High-speed or regional train networks connecting the areas.",
+                                  "estimated_duration": "3-8 hours depending on directness",
+                                  "price_range_usd": "50 - 150",
+                                  "frequency": "Several departures per day"
+                                },
+                                {
+                                  "mode": "Express Bus / Coach",
+                                  "description": "Intercity budget bus service with comfortable amenities.",
+                                  "estimated_duration": "5-12 hours depending on traffic",
+                                  "price_range_usd": "25 - 60",
+                                  "frequency": "Daily departures"
+                                },
+                                {
+                                  "mode": "Car Rental",
+                                  "description": "Drive yourself via scenic highways.",
+                                  "estimated_duration": "Varies (highly flexible)",
+                                  "price_range_usd": "40 - 100 per day + fuel and toll costs",
+                                  "frequency": "On-demand (unlimited flexibility)"
+                                }
+                              ]
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "21hk94zj",
+                            "name": "get_overall_pricing_estimate",
+                            "response": {
+                              "status": "success",
+                              "destination": "Paris",
+                              "duration_days": 5,
+                              "travel_style": "mid-range",
+                              "average_cost_per_day_usd": 167.2,
+                              "estimated_grand_total_usd": 836.0,
+                              "breakdown": {
+                                "accommodation": {
+                                  "rate_per_night_usd": 90.0,
+                                  "nights": 4,
+                                  "total_usd": 360.0
+                                },
+                                "meals_and_food": {
+                                  "rate_per_day_usd": 40.0,
+                                  "days": 5,
+                                  "total_usd": 200.0
+                                },
+                                "activities_and_sightseeing": {
+                                  "rate_per_day_usd": 25.0,
+                                  "days": 5,
+                                  "total_usd": 125.0
+                                },
+                                "local_transportation": {
+                                  "rate_per_day_usd": 15.0,
+                                  "days": 5,
+                                  "total_usd": 75.0
+                                },
+                                "miscellaneous_contingency": {
+                                  "percentage": "10%",
+                                  "total_usd": 76.0
+                                }
+                              }
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "root_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Bonjour! Planning a 5-day escape from London to the \"City of Light\" is a fantastic choice. Paris is a blend of world-class art, iconic architecture, and unparalleled culinary experiences. Here is your comprehensive mid-range travel guide and itinerary.\n\n---\n\n### **1. Getting from London to Paris**\nSince you are starting in London, you have several convenient options. For a mid-range budget, the **Eurostar (Train)** is often the best balance of speed, cost, and comfort.\n\n*   **Train (Eurostar):** The fastest and most convenient way. Departing from St Pancras International, you'll arrive at Gare du Nord in about **2.5 hours**.\n    *   *Price:* $50 - $150 USD (Book in advance for the best rates).\n*   **Flight:** Frequent flights from London airports (LHR, LGW, LCY) to Paris (CDG, ORY).\n    *   *Price:* $150 - $800 USD (Round-trip).\n*   **Express Bus:** The most budget-friendly option, taking around 7-9 hours via the ferry or Channel Tunnel.\n    *   *Price:* $25 - $60 USD.\n\n---\n\n### **2. Estimated 5-Day Budget (Mid-Range)**\nFor a mid-range style, you can expect comfortable 3-star accommodations, a mix of bistro dining and casual eats, and entry into major attractions.\n\n*   **Total Estimated Budget:** **$836 USD** per person.\n*   **Daily Average:** ~$167 USD.\n\n**Breakdown:**\n*   **Accommodation:** $360 (4 nights at ~$90/night).\n*   **Meals & Food:** $200 ($40/day for great croissants, lunches, and dinner).\n*   **Sightseeing:** $125 (Museum passes and attraction tickets).\n*   **Local Transport:** $75 (Metro/RER and occasional taxis).\n*   **Contingency:** $76.\n\n---\n\n### **3. Suggested 5-Day Itinerary**\n\n#### **Day 1: Arrival & The Icons**\n*   **Morning:** Arrive at Gare du Nord, check into your hotel, and grab a quick lunch.\n*   **Afternoon:** Visit the **Eiffel Tower**. Be sure to book tickets in advance to head to the summit for panoramic views.\n*   **Evening:** Enjoy a **Seine River Cruise** at sunset to see the city landmarks illuminated.\n\n#### **Day 2: Art & History**\n*   **Morning:** Spend your morning at the **Louvre Museum**. Focus on the highlights like the Mona Lisa and Winged Victory (3-4 hours).\n*   **Afternoon:** Walk through the Tuileries Garden toward the Place de la Concorde.\n*   **Evening:** Explore the Latin Quarter for dinner\u2014it's full of lively, mid-range bistros.\n\n#### **Day 3: Gothic Splendor & Island Wandering**\n*   **Morning:** Visit the **Notre-Dame Cathedral** (enjoy the exterior and the archaeological crypt) and the nearby Sainte-Chapelle for its stunning stained glass.\n*   **Afternoon:** Wander the charming streets of **\u00cele Saint-Louis** and enjoy some famous Berthillon ice cream.\n*   **Evening:** Explore the Marais district, known for its historic architecture and trendy boutiques.\n\n#### **Day 4: Luxury & Landmarks**\n*   **Morning:** Walk the famous **Champs-\u00c9lys\u00e9es**, shopping and soaking in the atmosphere.\n*   **Afternoon:** Reach the **Arc de Triomphe**. Climb to the top for a spectacular view of the twelve radiating avenues.\n*   **Evening:** Catch a cabaret show or enjoy a classic French meal in the 8th arrondissement.\n\n#### **Day 5: Montmartre & Departure**\n*   **Morning:** Head to the hilltop neighborhood of **Montmartre**. Visit the Sacr\u00e9-C\u0153ur Basilica and watch the artists in Place du Tertre.\n*   **Afternoon:** Enjoy a final French caf\u00e9 lunch before heading back to the station/airport for your return to London.\n\n---\n\n### **Expert Tips for Your Trip:**\n*   **The Paris Museum Pass:** If you plan on visiting many museums, consider buying a 4-day pass to save money and skip some lines.\n*   **Metro is Key:** Paris is very walkable, but the Metro is efficient and affordable. Buy a \"carnet\" of tickets or use a contactless card.\n*   **Dining:** Look for \"Formule\" menus at lunch (fixed-price 2 or 3-course meals), which offer incredible value for high-quality food.\n\nEnjoy your Parisian adventure! Would you like help looking for specific hotels or more dining recommendations?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I want to go to Tokyo from New York for 7 days. Can you suggest transportation, sights, and estimate luxury pricing?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "This 7-day luxury itinerary for Tokyo is designed to blend Japan's rich tradition with its cutting-edge modernity, ensuring you experience the best of the city in style.\n\n### **Flight & Transportation: New York to Tokyo**\nFor a luxury journey from New York (JFK/EWR) to Tokyo (HND/NRT), flying is the only viable option.\n*   **Recommended Mode:** Direct Flight (approx. 14 hours).\n*   **Airlines:** For a premium experience, consider **Japan Airlines (JAL)** or **All Nippon Airways (ANA)**, consistently ranked among the world's best for their First and Business Class cabins.\n*   **Local Transport:** Once in Tokyo, private chauffeurs or the highly efficient \"Green Car\" (First Class) on Japanese trains are the preferred ways to navigate the city.\n\n---\n\n### **7-Day Luxury Tokyo Itinerary**\n\n**Day 1: Arrival & Ginza Glamour**\n*   Arrive in Tokyo and take a private transfer to your hotel.\n*   Spend the evening in **Ginza**, Tokyo\u2019s premier luxury shopping and dining district. \n*   *Dinner:* Experience high-end Edomae sushi at a Michelin-starred restaurant.\n\n**Day 2: Historic Asakusa & River Views**\n*   **Senso-ji Temple:** Visit Tokyo\u2019s oldest temple in the morning to avoid crowds. Wander through the Nakamise shopping street for traditional crafts.\n*   **Sumida River Cruise:** Charter a private water taxi or join a luxury cruise from Asakusa to Hama-rikyu Gardens.\n*   **Tokyo Skytree:** End the day with panoramic views of the city from the observation decks of the tallest structure in Japan.\n\n**Day 3: Electronics, Anime & Tech Culture**\n*   **Akihabara:** Dive into the world\u2019s center for electronics and otaku culture. Explore multi-story department stores or high-end collectible boutiques.\n*   **Evening:** Enjoy a private cocktail session in a Roppongi Hills \"sky bar\" overlooking the Tokyo Tower.\n\n**Day 4: Serenity & High-Fashion**\n*   **Meiji Jingu Shrine:** Start your day with a peaceful walk through the dense forest surrounding this sacred Shinto shrine.\n*   **Harajuku & Omotesando:** Walk from the shrine to Omotesando, often called Tokyo\u2019s \"Champs-\u00c9lys\u00e9es,\" featuring stunning architecture and luxury flagship stores.\n\n**Day 5: The Pulse of the City**\n*   **Shibuya Crossing:** Witness the world\u2019s busiest intersection. For a luxury vantage point, head to the **Shibuya Sky** observatory.\n*   **Afternoon:** Indulge in a traditional Japanese Tea Ceremony at a private teahouse.\n\n**Day 6: Art & Relaxation**\n*   **Mori Art Museum:** Visit this contemporary art museum in Roppongi Hills.\n*   **Spa & Wellness:** Spend the afternoon at your hotel\u2019s world-class spa (recommendations include the Aman or The Peninsula) for a traditional Shiatsu massage.\n\n**Day 7: Final Shopping & Departure**\n*   Spend your final morning picking up luxury souvenirs in Nihonbashi.\n*   Private transfer to the airport for your flight back to New York.\n\n---\n\n### **Luxury Pricing Estimate (7 Days)**\nBased on a luxury travel style, here is a breakdown of your estimated expenses (excluding international flights from New York):\n\n| Category | Estimated Cost (USD) |\n| :--- | :--- |\n| **Accommodation** (6 Nights) | $1,680 ($280/night) |\n| **Activities & Sightseeing** | $560 |\n| **Local Transportation** | $315 |\n| **Meals & Fine Dining** | $840 |\n| **Miscellaneous/Contingency** | $339.50 |\n| **Total Estimated Budget** | **$3,734.50** |\n\n*Note: For top-tier 5-star hotels (like the Park Hyatt or Aman Tokyo), accommodation costs may be significantly higher, often starting at $800\u2013$1,200 per night.*\n\n---\n\n### **Pro-Tips for Your Trip**\n*   **Reservations:** Many of Tokyo\u2019s top-tier restaurants and experiences require booking weeks or even months in advance. Utilize your hotel\u2019s concierge service.\n*   **Pocket Wi-Fi/SIM:** Even for luxury travelers, having a reliable high-speed data connection is essential for navigating the city.\n*   **Etiquette:** Learning a few basic Japanese phrases and understanding local bowing customs will go a long way in enhancing your cultural experience.\n\nEnjoy your incredible journey to the heart of Japan!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "tokyo_trip",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "root_agent": {
+                "agent_id": "root_agent",
+                "agent_type": "LlmAgent",
+                "description": "A helpful assistant that plans trips with itineraries, transportation options, and budget/pricing estimates.",
+                "instruction": "You are an expert trip planner. Your job is to help users plan amazing trips to their desired destinations.\nWhen a user provides a destination, origin, number of days, and/or travel preferences:\n1. Suggest top places to visit using the 'get_places_to_visit' tool.\n2. Provide possible transportation options from their origin or general travel options using the 'get_transportation_options' tool.\n3. Offer an overall pricing estimate for their trip based on the destination, duration, and travel style (budget, mid-range, or luxury) using the 'get_overall_pricing_estimate' tool.\n\nSynthesize all this information into a beautifully structured, engaging, and professional travel itinerary and guide.\nIf the user's query is simple or lacks details (like origin or travel style), politely ask for clarification or use sensible defaults/guesses while letting them know.\nYou can also use 'get_current_time' if the user asks about the time in a city.",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns the current time in a specified city.",
+                        "name": "get_current_time",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "city": {
+                              "title": "City",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "city"
+                          ],
+                          "title": "get_current_timeParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns a list of top places to visit in a specified destination (city, country, or region).\n\nArgs:\n    destination: The name of the destination, city, or country to visit.\n\nReturns:\n    A dictionary containing the destination and a list of places to visit, each with details.",
+                        "name": "get_places_to_visit",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "destination"
+                          ],
+                          "title": "get_places_to_visitParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns a list of possible transportation options between the origin and destination.\n\nArgs:\n    origin: The starting location of the trip.\n    destination: The destination city, country, or place.\n\nReturns:\n    A dictionary with status, origin, destination, and details of possible transportation options.",
+                        "name": "get_transportation_options",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "origin": {
+                              "title": "Origin",
+                              "type": "string"
+                            },
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "origin",
+                            "destination"
+                          ],
+                          "title": "get_transportation_optionsParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Estimates overall pricing and budget breakdown for a trip of a given number of days to a destination.\n\nArgs:\n    destination: The destination city, country, or place.\n    days: The duration of the trip in days.\n    travel_style: The style of travel. Choose from 'budget', 'mid-range', or 'luxury'.\n\nReturns:\n    A dictionary containing the pricing breakdown, daily average cost, and total estimated budget.",
+                        "name": "get_overall_pricing_estimate",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            },
+                            "days": {
+                              "title": "Days",
+                              "type": "integer"
+                            },
+                            "travel_style": {
+                              "title": "Travel Style",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "destination",
+                            "days",
+                            "travel_style"
+                          ],
+                          "title": "get_overall_pricing_estimateParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "root_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "vqy2aov0",
+                            "args": {
+                              "destination": "Tokyo"
+                            },
+                            "name": "get_places_to_visit",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "geqv7lrn",
+                            "args": {
+                              "destination": "Tokyo",
+                              "origin": "New York"
+                            },
+                            "name": "get_transportation_options",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "1iupj0bf",
+                            "args": {
+                              "days": 7,
+                              "travel_style": "luxury",
+                              "destination": "Tokyo"
+                            },
+                            "name": "get_overall_pricing_estimate",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "root_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "vqy2aov0",
+                            "name": "get_places_to_visit",
+                            "response": {
+                              "status": "success",
+                              "destination": "Tokyo",
+                              "places": [
+                                {
+                                  "name": "Senso-ji Temple",
+                                  "description": "Tokyo's oldest and most significant Buddhist temple, located in Asakusa.",
+                                  "category": "Historical / Religious",
+                                  "recommended_duration": "1-2 hours"
+                                },
+                                {
+                                  "name": "Shibuya Crossing",
+                                  "description": "The world's busiest pedestrian intersection, a vibrant symbol of modern Tokyo.",
+                                  "category": "Landmark / Sightseeing",
+                                  "recommended_duration": "1 hour"
+                                },
+                                {
+                                  "name": "Meiji Jingu Shrine",
+                                  "description": "A serene Shinto shrine dedicated to Emperor Meiji, nestled in a dense forest.",
+                                  "category": "Historical / Nature",
+                                  "recommended_duration": "1-2 hours"
+                                },
+                                {
+                                  "name": "Tokyo Skytree",
+                                  "description": "The tallest structure in Japan, offering breathtaking 360-degree views of the city.",
+                                  "category": "Landmark",
+                                  "recommended_duration": "1-2 hours"
+                                },
+                                {
+                                  "name": "Akihabara",
+                                  "description": "The ultimate district for electronics, gaming, anime, and manga culture.",
+                                  "category": "Shopping / Culture",
+                                  "recommended_duration": "3-4 hours"
+                                }
+                              ]
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "geqv7lrn",
+                            "name": "get_transportation_options",
+                            "response": {
+                              "status": "success",
+                              "origin": "New York",
+                              "destination": "Tokyo",
+                              "transportation_options": [
+                                {
+                                  "mode": "Flight",
+                                  "description": "Direct or connecting commercial flights from New York to nearest airport to Tokyo.",
+                                  "estimated_duration": "2-12 hours depending on stops and route",
+                                  "price_range_usd": "150 - 800 (economy round-trip)",
+                                  "frequency": "Multiple daily options"
+                                },
+                                {
+                                  "mode": "Train",
+                                  "description": "High-speed or regional train networks connecting the areas.",
+                                  "estimated_duration": "3-8 hours depending on directness",
+                                  "price_range_usd": "50 - 150",
+                                  "frequency": "Several departures per day"
+                                },
+                                {
+                                  "mode": "Express Bus / Coach",
+                                  "description": "Intercity budget bus service with comfortable amenities.",
+                                  "estimated_duration": "5-12 hours depending on traffic",
+                                  "price_range_usd": "25 - 60",
+                                  "frequency": "Daily departures"
+                                },
+                                {
+                                  "mode": "Car Rental",
+                                  "description": "Drive yourself via scenic highways.",
+                                  "estimated_duration": "Varies (highly flexible)",
+                                  "price_range_usd": "40 - 100 per day + fuel and toll costs",
+                                  "frequency": "On-demand (unlimited flexibility)"
+                                }
+                              ]
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "1iupj0bf",
+                            "name": "get_overall_pricing_estimate",
+                            "response": {
+                              "status": "success",
+                              "destination": "Tokyo",
+                              "duration_days": 7,
+                              "travel_style": "luxury",
+                              "average_cost_per_day_usd": 533.5,
+                              "estimated_grand_total_usd": 3734.5,
+                              "breakdown": {
+                                "accommodation": {
+                                  "rate_per_night_usd": 280.0,
+                                  "nights": 6,
+                                  "total_usd": 1680.0
+                                },
+                                "meals_and_food": {
+                                  "rate_per_day_usd": 120.0,
+                                  "days": 7,
+                                  "total_usd": 840.0
+                                },
+                                "activities_and_sightseeing": {
+                                  "rate_per_day_usd": 80.0,
+                                  "days": 7,
+                                  "total_usd": 560.0
+                                },
+                                "local_transportation": {
+                                  "rate_per_day_usd": 45.0,
+                                  "days": 7,
+                                  "total_usd": 315.0
+                                },
+                                "miscellaneous_contingency": {
+                                  "percentage": "10%",
+                                  "total_usd": 339.5
+                                }
+                              }
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "root_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "This 7-day luxury itinerary for Tokyo is designed to blend Japan's rich tradition with its cutting-edge modernity, ensuring you experience the best of the city in style.\n\n### **Flight & Transportation: New York to Tokyo**\nFor a luxury journey from New York (JFK/EWR) to Tokyo (HND/NRT), flying is the only viable option.\n*   **Recommended Mode:** Direct Flight (approx. 14 hours).\n*   **Airlines:** For a premium experience, consider **Japan Airlines (JAL)** or **All Nippon Airways (ANA)**, consistently ranked among the world's best for their First and Business Class cabins.\n*   **Local Transport:** Once in Tokyo, private chauffeurs or the highly efficient \"Green Car\" (First Class) on Japanese trains are the preferred ways to navigate the city.\n\n---\n\n### **7-Day Luxury Tokyo Itinerary**\n\n**Day 1: Arrival & Ginza Glamour**\n*   Arrive in Tokyo and take a private transfer to your hotel.\n*   Spend the evening in **Ginza**, Tokyo\u2019s premier luxury shopping and dining district. \n*   *Dinner:* Experience high-end Edomae sushi at a Michelin-starred restaurant.\n\n**Day 2: Historic Asakusa & River Views**\n*   **Senso-ji Temple:** Visit Tokyo\u2019s oldest temple in the morning to avoid crowds. Wander through the Nakamise shopping street for traditional crafts.\n*   **Sumida River Cruise:** Charter a private water taxi or join a luxury cruise from Asakusa to Hama-rikyu Gardens.\n*   **Tokyo Skytree:** End the day with panoramic views of the city from the observation decks of the tallest structure in Japan.\n\n**Day 3: Electronics, Anime & Tech Culture**\n*   **Akihabara:** Dive into the world\u2019s center for electronics and otaku culture. Explore multi-story department stores or high-end collectible boutiques.\n*   **Evening:** Enjoy a private cocktail session in a Roppongi Hills \"sky bar\" overlooking the Tokyo Tower.\n\n**Day 4: Serenity & High-Fashion**\n*   **Meiji Jingu Shrine:** Start your day with a peaceful walk through the dense forest surrounding this sacred Shinto shrine.\n*   **Harajuku & Omotesando:** Walk from the shrine to Omotesando, often called Tokyo\u2019s \"Champs-\u00c9lys\u00e9es,\" featuring stunning architecture and luxury flagship stores.\n\n**Day 5: The Pulse of the City**\n*   **Shibuya Crossing:** Witness the world\u2019s busiest intersection. For a luxury vantage point, head to the **Shibuya Sky** observatory.\n*   **Afternoon:** Indulge in a traditional Japanese Tea Ceremony at a private teahouse.\n\n**Day 6: Art & Relaxation**\n*   **Mori Art Museum:** Visit this contemporary art museum in Roppongi Hills.\n*   **Spa & Wellness:** Spend the afternoon at your hotel\u2019s world-class spa (recommendations include the Aman or The Peninsula) for a traditional Shiatsu massage.\n\n**Day 7: Final Shopping & Departure**\n*   Spend your final morning picking up luxury souvenirs in Nihonbashi.\n*   Private transfer to the airport for your flight back to New York.\n\n---\n\n### **Luxury Pricing Estimate (7 Days)**\nBased on a luxury travel style, here is a breakdown of your estimated expenses (excluding international flights from New York):\n\n| Category | Estimated Cost (USD) |\n| :--- | :--- |\n| **Accommodation** (6 Nights) | $1,680 ($280/night) |\n| **Activities & Sightseeing** | $560 |\n| **Local Transportation** | $315 |\n| **Meals & Fine Dining** | $840 |\n| **Miscellaneous/Contingency** | $339.50 |\n| **Total Estimated Budget** | **$3,734.50** |\n\n*Note: For top-tier 5-star hotels (like the Park Hyatt or Aman Tokyo), accommodation costs may be significantly higher, often starting at $800\u2013$1,200 per night.*\n\n---\n\n### **Pro-Tips for Your Trip**\n*   **Reservations:** Many of Tokyo\u2019s top-tier restaurants and experiences require booking weeks or even months in advance. Utilize your hotel\u2019s concierge service.\n*   **Pocket Wi-Fi/SIM:** Even for luxury travelers, having a reliable high-speed data connection is essential for navigating the city.\n*   **Etiquette:** Learning a few basic Japanese phrases and understanding local bowing customs will go a long way in enhancing your cultural experience.\n\nEnjoy your incredible journey to the heart of Japan!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Help me plan a budget-friendly 10-day trip to Japan.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "That sounds like an incredible trip! Japan is a beautiful destination where tradition and modernity blend seamlessly. Planning a 10-day budget-friendly trip is definitely doable with some smart choices around food and transportation.\n\nTo give you a starting point, I\u2019ve used **San Francisco** as a sample origin for flight prices, and focused on a **budget travel style** (think cozy hostels, delicious \"konbini\" convenience store meals, and local transport).\n\n### \ud83d\udcb0 Budget Estimate (10 Days)\n*   **Total Estimated Budget:** ~$660 USD (excluding international flights)\n*   **Daily Average:** ~$66 USD\n*   **Breakdown:**\n    *   **Accommodation:** $270 (Hostels or capsule hotels)\n    *   **Food:** $150 (Mix of street food, ramen shops, and 7-Eleven/Lawson meals)\n    *   **Transport:** $80 (Local trains and buses)\n    *   **Activities:** $100 (Many shrines and parks are free or low-cost)\n\n---\n\n### \ud83d\uddfa\ufe0f Your 10-Day Budget Itinerary\n\n**Days 1-3: Tokyo \u2013 The Neon Metropolis**\n*   **Must See:** **Shibuya Crossing**. Experience the world's busiest intersection and the nearby Hachiko Statue.\n*   **Budget Tip:** Explore the free observation deck at the Tokyo Metropolitan Government Building instead of paying for Tokyo Skytree.\n*   **Activity:** Wander through the trendy streets of Harajuku and the peaceful Meiji Shrine.\n\n**Days 4-5: Mount Fuji & Hakone**\n*   **Must See:** **Mount Fuji**. Take a budget-friendly highway bus from Shinjuku to the Fuji Five Lakes area.\n*   **Activity:** Use the Hakone Free Pass (a great value) for cable cars and pirate ship cruises across Lake Ashi with views of Fuji.\n\n**Days 6-8: Kyoto & Nara \u2013 Old Japan**\n*   **Must See (Kyoto):** **Fushimi Inari-taisha Shrine**. Hike through the thousands of iconic orange torii gates (Free!).\n*   **Must See (Nara):** **Todai-ji Temple**. See the massive Great Buddha and hang out with the famous wild deer in the park.\n*   **Budget Tip:** Kyoto is very walkable and bike-friendly. Renting a bicycle is often cheaper than the bus.\n\n**Day 9: Hiroshima \u2013 History & Peace**\n*   **Must See:** **Hiroshima Peace Memorial Park**. A moving and essential historical site.\n*   **Travel Tip:** Consider a night bus from Kyoto to Hiroshima and back to Tokyo to save on a night of accommodation and expensive Shinkansen (bullet train) tickets.\n\n**Day 10: Tokyo Departure**\n*   Head back to Tokyo for some last-minute souvenir shopping at Don Quijote (a budget paradise) before your flight.\n\n---\n\n### \u2708\ufe0f Transportation Options\n*   **International Flights:** From San Francisco, flights typically range from **$150 - $800** depending on the season and how early you book.\n*   **Internal Travel:** \n    *   **Express Buses:** The most budget-friendly way to travel between cities (e.g., Tokyo to Kyoto).\n    *   **Local Trains:** Slower than the Bullet Train, but significantly cheaper.\n    *   **Walking:** Many of Japan's best sights are grouped together\u2014bring comfortable shoes!\n\n### \ud83d\udca1 Expert Tips for Your Budget Trip:\n1.  **Eat at \"Konbini\":** Japanese convenience stores (7-Eleven, Lawson, FamilyMart) offer high-quality, delicious meals like onigiri and bento boxes for just a few dollars.\n2.  **Get a Welcome Suica/Pasmo Card:** These rechargeable cards make taking local subways seamless.\n3.  **Drink from Vending Machines:** They are everywhere and offer affordable hot or cold drinks.\n\n**Would you like me to adjust this based on a specific departure city or refine the activities to a specific interest (like anime, food, or hiking)?**",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "japan_budget",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "root_agent": {
+                "agent_id": "root_agent",
+                "agent_type": "LlmAgent",
+                "description": "A helpful assistant that plans trips with itineraries, transportation options, and budget/pricing estimates.",
+                "instruction": "You are an expert trip planner. Your job is to help users plan amazing trips to their desired destinations.\nWhen a user provides a destination, origin, number of days, and/or travel preferences:\n1. Suggest top places to visit using the 'get_places_to_visit' tool.\n2. Provide possible transportation options from their origin or general travel options using the 'get_transportation_options' tool.\n3. Offer an overall pricing estimate for their trip based on the destination, duration, and travel style (budget, mid-range, or luxury) using the 'get_overall_pricing_estimate' tool.\n\nSynthesize all this information into a beautifully structured, engaging, and professional travel itinerary and guide.\nIf the user's query is simple or lacks details (like origin or travel style), politely ask for clarification or use sensible defaults/guesses while letting them know.\nYou can also use 'get_current_time' if the user asks about the time in a city.",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns the current time in a specified city.",
+                        "name": "get_current_time",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "city": {
+                              "title": "City",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "city"
+                          ],
+                          "title": "get_current_timeParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns a list of top places to visit in a specified destination (city, country, or region).\n\nArgs:\n    destination: The name of the destination, city, or country to visit.\n\nReturns:\n    A dictionary containing the destination and a list of places to visit, each with details.",
+                        "name": "get_places_to_visit",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "destination"
+                          ],
+                          "title": "get_places_to_visitParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Returns a list of possible transportation options between the origin and destination.\n\nArgs:\n    origin: The starting location of the trip.\n    destination: The destination city, country, or place.\n\nReturns:\n    A dictionary with status, origin, destination, and details of possible transportation options.",
+                        "name": "get_transportation_options",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "origin": {
+                              "title": "Origin",
+                              "type": "string"
+                            },
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "origin",
+                            "destination"
+                          ],
+                          "title": "get_transportation_optionsParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Estimates overall pricing and budget breakdown for a trip of a given number of days to a destination.\n\nArgs:\n    destination: The destination city, country, or place.\n    days: The duration of the trip in days.\n    travel_style: The style of travel. Choose from 'budget', 'mid-range', or 'luxury'.\n\nReturns:\n    A dictionary containing the pricing breakdown, daily average cost, and total estimated budget.",
+                        "name": "get_overall_pricing_estimate",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "destination": {
+                              "title": "Destination",
+                              "type": "string"
+                            },
+                            "days": {
+                              "title": "Days",
+                              "type": "integer"
+                            },
+                            "travel_style": {
+                              "title": "Travel Style",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "destination",
+                            "days",
+                            "travel_style"
+                          ],
+                          "title": "get_overall_pricing_estimateParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": null,
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "root_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "y0dvk0ck",
+                            "args": {
+                              "destination": "Japan"
+                            },
+                            "name": "get_places_to_visit",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "br2qvogq",
+                            "args": {
+                              "destination": "Japan",
+                              "travel_style": "budget",
+                              "days": 10
+                            },
+                            "name": "get_overall_pricing_estimate",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "j19ccnrl",
+                            "args": {
+                              "origin": "San Francisco, USA",
+                              "destination": "Tokyo, Japan"
+                            },
+                            "name": "get_transportation_options",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "root_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "y0dvk0ck",
+                            "name": "get_places_to_visit",
+                            "response": {
+                              "status": "success",
+                              "destination": "Japan",
+                              "places": [
+                                {
+                                  "name": "Fushimi Inari-taisha Shrine (Kyoto)",
+                                  "description": "Famous shrine known for its path of thousands of vibrant orange torii gates.",
+                                  "category": "Historical / Religious",
+                                  "recommended_duration": "2-3 hours"
+                                },
+                                {
+                                  "name": "Mount Fuji",
+                                  "description": "Japan's iconic snow-capped volcanic peak, a sacred and scenic masterpiece.",
+                                  "category": "Nature",
+                                  "recommended_duration": "1 day"
+                                },
+                                {
+                                  "name": "Todai-ji Temple (Nara)",
+                                  "description": "Massive temple housing one of Japan's largest bronze Buddha statues, surrounded by free-roaming deer.",
+                                  "category": "Historical",
+                                  "recommended_duration": "2 hours"
+                                },
+                                {
+                                  "name": "Shibuya Crossing (Tokyo)",
+                                  "description": "The iconic multi-way crosswalk representing modern Japanese urban energy.",
+                                  "category": "Landmark",
+                                  "recommended_duration": "1 hour"
+                                },
+                                {
+                                  "name": "Hiroshima Peace Memorial Park",
+                                  "description": "A deeply moving memorial park dedicated to legacy of the atomic bomb and world peace.",
+                                  "category": "Historical",
+                                  "recommended_duration": "2 hours"
+                                }
+                              ]
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "br2qvogq",
+                            "name": "get_overall_pricing_estimate",
+                            "response": {
+                              "status": "success",
+                              "destination": "Japan",
+                              "duration_days": 10,
+                              "travel_style": "budget",
+                              "average_cost_per_day_usd": 66.0,
+                              "estimated_grand_total_usd": 660.0,
+                              "breakdown": {
+                                "accommodation": {
+                                  "rate_per_night_usd": 30.0,
+                                  "nights": 9,
+                                  "total_usd": 270.0
+                                },
+                                "meals_and_food": {
+                                  "rate_per_day_usd": 15.0,
+                                  "days": 10,
+                                  "total_usd": 150.0
+                                },
+                                "activities_and_sightseeing": {
+                                  "rate_per_day_usd": 10.0,
+                                  "days": 10,
+                                  "total_usd": 100.0
+                                },
+                                "local_transportation": {
+                                  "rate_per_day_usd": 8.0,
+                                  "days": 10,
+                                  "total_usd": 80.0
+                                },
+                                "miscellaneous_contingency": {
+                                  "percentage": "10%",
+                                  "total_usd": 60.0
+                                }
+                              }
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "j19ccnrl",
+                            "name": "get_transportation_options",
+                            "response": {
+                              "status": "success",
+                              "origin": "San Francisco, USA",
+                              "destination": "Tokyo, Japan",
+                              "transportation_options": [
+                                {
+                                  "mode": "Flight",
+                                  "description": "Direct or connecting commercial flights from San Francisco, USA to nearest airport to Tokyo, Japan.",
+                                  "estimated_duration": "2-12 hours depending on stops and route",
+                                  "price_range_usd": "150 - 800 (economy round-trip)",
+                                  "frequency": "Multiple daily options"
+                                },
+                                {
+                                  "mode": "Train",
+                                  "description": "High-speed or regional train networks connecting the areas.",
+                                  "estimated_duration": "3-8 hours depending on directness",
+                                  "price_range_usd": "50 - 150",
+                                  "frequency": "Several departures per day"
+                                },
+                                {
+                                  "mode": "Express Bus / Coach",
+                                  "description": "Intercity budget bus service with comfortable amenities.",
+                                  "estimated_duration": "5-12 hours depending on traffic",
+                                  "price_range_usd": "25 - 60",
+                                  "frequency": "Daily departures"
+                                },
+                                {
+                                  "mode": "Car Rental",
+                                  "description": "Drive yourself via scenic highways.",
+                                  "estimated_duration": "Varies (highly flexible)",
+                                  "price_range_usd": "40 - 100 per day + fuel and toll costs",
+                                  "frequency": "On-demand (unlimited flexibility)"
+                                }
+                              ]
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "root_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "That sounds like an incredible trip! Japan is a beautiful destination where tradition and modernity blend seamlessly. Planning a 10-day budget-friendly trip is definitely doable with some smart choices around food and transportation.\n\nTo give you a starting point, I\u2019ve used **San Francisco** as a sample origin for flight prices, and focused on a **budget travel style** (think cozy hostels, delicious \"konbini\" convenience store meals, and local transport).\n\n### \ud83d\udcb0 Budget Estimate (10 Days)\n*   **Total Estimated Budget:** ~$660 USD (excluding international flights)\n*   **Daily Average:** ~$66 USD\n*   **Breakdown:**\n    *   **Accommodation:** $270 (Hostels or capsule hotels)\n    *   **Food:** $150 (Mix of street food, ramen shops, and 7-Eleven/Lawson meals)\n    *   **Transport:** $80 (Local trains and buses)\n    *   **Activities:** $100 (Many shrines and parks are free or low-cost)\n\n---\n\n### \ud83d\uddfa\ufe0f Your 10-Day Budget Itinerary\n\n**Days 1-3: Tokyo \u2013 The Neon Metropolis**\n*   **Must See:** **Shibuya Crossing**. Experience the world's busiest intersection and the nearby Hachiko Statue.\n*   **Budget Tip:** Explore the free observation deck at the Tokyo Metropolitan Government Building instead of paying for Tokyo Skytree.\n*   **Activity:** Wander through the trendy streets of Harajuku and the peaceful Meiji Shrine.\n\n**Days 4-5: Mount Fuji & Hakone**\n*   **Must See:** **Mount Fuji**. Take a budget-friendly highway bus from Shinjuku to the Fuji Five Lakes area.\n*   **Activity:** Use the Hakone Free Pass (a great value) for cable cars and pirate ship cruises across Lake Ashi with views of Fuji.\n\n**Days 6-8: Kyoto & Nara \u2013 Old Japan**\n*   **Must See (Kyoto):** **Fushimi Inari-taisha Shrine**. Hike through the thousands of iconic orange torii gates (Free!).\n*   **Must See (Nara):** **Todai-ji Temple**. See the massive Great Buddha and hang out with the famous wild deer in the park.\n*   **Budget Tip:** Kyoto is very walkable and bike-friendly. Renting a bicycle is often cheaper than the bus.\n\n**Day 9: Hiroshima \u2013 History & Peace**\n*   **Must See:** **Hiroshima Peace Memorial Park**. A moving and essential historical site.\n*   **Travel Tip:** Consider a night bus from Kyoto to Hiroshima and back to Tokyo to save on a night of accommodation and expensive Shinkansen (bullet train) tickets.\n\n**Day 10: Tokyo Departure**\n*   Head back to Tokyo for some last-minute souvenir shopping at Don Quijote (a budget paradise) before your flight.\n\n---\n\n### \u2708\ufe0f Transportation Options\n*   **International Flights:** From San Francisco, flights typically range from **$150 - $800** depending on the season and how early you book.\n*   **Internal Travel:** \n    *   **Express Buses:** The most budget-friendly way to travel between cities (e.g., Tokyo to Kyoto).\n    *   **Local Trains:** Slower than the Bullet Train, but significantly cheaper.\n    *   **Walking:** Many of Japan's best sights are grouped together\u2014bring comfortable shoes!\n\n### \ud83d\udca1 Expert Tips for Your Budget Trip:\n1.  **Eat at \"Konbini\":** Japanese convenience stores (7-Eleven, Lawson, FamilyMart) offer high-quality, delicious meals like onigiri and bento boxes for just a few dollars.\n2.  **Get a Welcome Suica/Pasmo Card:** These rechargeable cards make taking local subways seamless.\n3.  **Drink from Vending Machines:** They are everywhere and offer affordable hot or cold drinks.\n\n**Would you like me to adjust this based on a specific departure city or refine the activities to a specific interest (like anime, food, or hiking)?**",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": null,
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null
+        }
+      ],
+      "eval_dataset_df": null,
+      "candidate_name": null
+    }
+  ],
+  "metadata": {
+    "candidate_names": [
+      "candidate_1"
+    ],
+    "dataset_name": null,
+    "dataset_id": null,
+    "creation_timestamp": "2026-07-10T06:55:22.779209Z",
+    "dataset": [
+      {
+        "prompt_display_text": "Hello, what can you help me with?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Hello, what can you help me with?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "Hello! I'm your expert trip planner, and I'm here to help you design the perfect getaway. Whether you have a specific destination in mind or are just looking for inspiration, I can assist you with:\n\n*   **Top Places to Visit:** I can suggest the best sights, attractions, and hidden gems in any city or country.\n*   **Transportation Options:** I can find the best ways to get from your home to your destination, whether by plane, train, or car.\n*   **Budget & Pricing Estimates:** I can provide an estimated cost for your trip based on your travel style\u2014whether you're looking for a budget-friendly adventure, a mid-range experience, or a luxury vacation.\n*   **Personalized Itineraries:** I can synthesize all this information into a structured and engaging travel guide just for you.\n\nTo get started, just tell me:\n1.  **Where** would you like to go?\n2.  **Where** are you traveling from?\n3.  **How many days** do you plan to stay?\n4.  What is your **travel style** (budget, mid-range, or luxury)?\n\nWhere should we start planning your next adventure?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Hello! I'm your expert trip planner, and I'm here to help you design the perfect getaway. Whether you have a specific destination in mind or are just looking for inspiration, I can assist you with:\\n\\n*   **Top Places to Visit:** I can suggest the best sights, attractions, and hidden gems in any city or country.\\n*   **Transportation Options:** I can find the best ways to get from your home to your destination, whether by plane, train, or car.\\n*   **Budget & Pricing Estimates:** I can provide an estimated cost for your trip based on your travel style\u2014whether you're looking for a budget-friendly adventure, a mid-range experience, or a luxury vacation.\\n*   **Personalized Itineraries:** I can synthesize all this information into a structured and engaging travel guide just for you.\\n\\nTo get started, just tell me:\\n1.  **Where** would you like to go?\\n2.  **Where** are you traveling from?\\n3.  **How many days** do you plan to stay?\\n4.  What is your **travel style** (budget, mid-range, or luxury)?\\n\\nWhere should we start planning your next adventure?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"root_agent\": {\"agent_id\": \"root_agent\", \"agent_type\": \"LlmAgent\", \"description\": \"A helpful assistant that plans trips with itineraries, transportation options, and budget/pricing estimates.\", \"instruction\": \"You are an expert trip planner. Your job is to help users plan amazing trips to their desired destinations.\\nWhen a user provides a destination, origin, number of days, and/or travel preferences:\\n1. Suggest top places to visit using the 'get_places_to_visit' tool.\\n2. Provide possible transportation options from their origin or general travel options using the 'get_transportation_options' tool.\\n3. Offer an overall pricing estimate for their trip based on the destination, duration, and travel style (budget, mid-range, or luxury) using the 'get_overall_pricing_estimate' tool.\\n\\nSynthesize all this information into a beautifully structured, engaging, and professional travel itinerary and guide.\\nIf the user's query is simple or lacks details (like origin or travel style), politely ask for clarification or use sensible defaults/guesses while letting them know.\\nYou can also use 'get_current_time' if the user asks about the time in a city.\", \"tools\": [{\"function_declarations\": [{\"description\": \"Returns the current time in a specified city.\", \"name\": \"get_current_time\", \"parameters_json_schema\": {\"properties\": {\"city\": {\"title\": \"City\", \"type\": \"string\"}}, \"required\": [\"city\"], \"title\": \"get_current_timeParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Returns a list of top places to visit in a specified destination (city, country, or region).\\n\\nArgs:\\n    destination: The name of the destination, city, or country to visit.\\n\\nReturns:\\n    A dictionary containing the destination and a list of places to visit, each with details.\", \"name\": \"get_places_to_visit\", \"parameters_json_schema\": {\"properties\": {\"destination\": {\"title\": \"Destination\", \"type\": \"string\"}}, \"required\": [\"destination\"], \"title\": \"get_places_to_visitParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Returns a list of possible transportation options between the origin and destination.\\n\\nArgs:\\n    origin: The starting location of the trip.\\n    destination: The destination city, country, or place.\\n\\nReturns:\\n    A dictionary with status, origin, destination, and details of possible transportation options.\", \"name\": \"get_transportation_options\", \"parameters_json_schema\": {\"properties\": {\"origin\": {\"title\": \"Origin\", \"type\": \"string\"}, \"destination\": {\"title\": \"Destination\", \"type\": \"string\"}}, \"required\": [\"origin\", \"destination\"], \"title\": \"get_transportation_optionsParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Estimates overall pricing and budget breakdown for a trip of a given number of days to a destination.\\n\\nArgs:\\n    destination: The destination city, country, or place.\\n    days: The duration of the trip in days.\\n    travel_style: The style of travel. Choose from 'budget', 'mid-range', or 'luxury'.\\n\\nReturns:\\n    A dictionary containing the pricing breakdown, daily average cost, and total estimated budget.\", \"name\": \"get_overall_pricing_estimate\", \"parameters_json_schema\": {\"properties\": {\"destination\": {\"title\": \"Destination\", \"type\": \"string\"}, \"days\": {\"title\": \"Days\", \"type\": \"integer\"}, \"travel_style\": {\"title\": \"Travel Style\", \"type\": \"string\"}}, \"required\": [\"destination\", \"days\", \"travel_style\"], \"title\": \"get_overall_pricing_estimateParams\", \"type\": \"object\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"root_agent\", \"content\": {\"parts\": [{\"text\": \"Hello! I'm your expert trip planner, and I'm here to help you design the perfect getaway. Whether you have a specific destination in mind or are just looking for inspiration, I can assist you with:\\n\\n*   **Top Places to Visit:** I can suggest the best sights, attractions, and hidden gems in any city or country.\\n*   **Transportation Options:** I can find the best ways to get from your home to your destination, whether by plane, train, or car.\\n*   **Budget & Pricing Estimates:** I can provide an estimated cost for your trip based on your travel style\u2014whether you're looking for a budget-friendly adventure, a mid-range experience, or a luxury vacation.\\n*   **Personalized Itineraries:** I can synthesize all this information into a structured and engaging travel guide just for you.\\n\\nTo get started, just tell me:\\n1.  **Where** would you like to go?\\n2.  **Where** are you traveling from?\\n3.  **How many days** do you plan to stay?\\n4.  What is your **travel style** (budget, mid-range, or luxury)?\\n\\nWhere should we start planning your next adventure?\"}], \"role\": \"model\"}}]}]}"
+      },
+      {
+        "prompt_display_text": "Plan a 5-day trip to Paris starting from London, with a mid-range budget.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Plan a 5-day trip to Paris starting from London, with a mid-range budget.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "Bonjour! Planning a 5-day escape from London to the \"City of Light\" is a fantastic choice. Paris is a blend of world-class art, iconic architecture, and unparalleled culinary experiences. Here is your comprehensive mid-range travel guide and itinerary.\n\n---\n\n### **1. Getting from London to Paris**\nSince you are starting in London, you have several convenient options. For a mid-range budget, the **Eurostar (Train)** is often the best balance of speed, cost, and comfort.\n\n*   **Train (Eurostar):** The fastest and most convenient way. Departing from St Pancras International, you'll arrive at Gare du Nord in about **2.5 hours**.\n    *   *Price:* $50 - $150 USD (Book in advance for the best rates).\n*   **Flight:** Frequent flights from London airports (LHR, LGW, LCY) to Paris (CDG, ORY).\n    *   *Price:* $150 - $800 USD (Round-trip).\n*   **Express Bus:** The most budget-friendly option, taking around 7-9 hours via the ferry or Channel Tunnel.\n    *   *Price:* $25 - $60 USD.\n\n---\n\n### **2. Estimated 5-Day Budget (Mid-Range)**\nFor a mid-range style, you can expect comfortable 3-star accommodations, a mix of bistro dining and casual eats, and entry into major attractions.\n\n*   **Total Estimated Budget:** **$836 USD** per person.\n*   **Daily Average:** ~$167 USD.\n\n**Breakdown:**\n*   **Accommodation:** $360 (4 nights at ~$90/night).\n*   **Meals & Food:** $200 ($40/day for great croissants, lunches, and dinner).\n*   **Sightseeing:** $125 (Museum passes and attraction tickets).\n*   **Local Transport:** $75 (Metro/RER and occasional taxis).\n*   **Contingency:** $76.\n\n---\n\n### **3. Suggested 5-Day Itinerary**\n\n#### **Day 1: Arrival & The Icons**\n*   **Morning:** Arrive at Gare du Nord, check into your hotel, and grab a quick lunch.\n*   **Afternoon:** Visit the **Eiffel Tower**. Be sure to book tickets in advance to head to the summit for panoramic views.\n*   **Evening:** Enjoy a **Seine River Cruise** at sunset to see the city landmarks illuminated.\n\n#### **Day 2: Art & History**\n*   **Morning:** Spend your morning at the **Louvre Museum**. Focus on the highlights like the Mona Lisa and Winged Victory (3-4 hours).\n*   **Afternoon:** Walk through the Tuileries Garden toward the Place de la Concorde.\n*   **Evening:** Explore the Latin Quarter for dinner\u2014it's full of lively, mid-range bistros.\n\n#### **Day 3: Gothic Splendor & Island Wandering**\n*   **Morning:** Visit the **Notre-Dame Cathedral** (enjoy the exterior and the archaeological crypt) and the nearby Sainte-Chapelle for its stunning stained glass.\n*   **Afternoon:** Wander the charming streets of **\u00cele Saint-Louis** and enjoy some famous Berthillon ice cream.\n*   **Evening:** Explore the Marais district, known for its historic architecture and trendy boutiques.\n\n#### **Day 4: Luxury & Landmarks**\n*   **Morning:** Walk the famous **Champs-\u00c9lys\u00e9es**, shopping and soaking in the atmosphere.\n*   **Afternoon:** Reach the **Arc de Triomphe**. Climb to the top for a spectacular view of the twelve radiating avenues.\n*   **Evening:** Catch a cabaret show or enjoy a classic French meal in the 8th arrondissement.\n\n#### **Day 5: Montmartre & Departure**\n*   **Morning:** Head to the hilltop neighborhood of **Montmartre**. Visit the Sacr\u00e9-C\u0153ur Basilica and watch the artists in Place du Tertre.\n*   **Afternoon:** Enjoy a final French caf\u00e9 lunch before heading back to the station/airport for your return to London.\n\n---\n\n### **Expert Tips for Your Trip:**\n*   **The Paris Museum Pass:** If you plan on visiting many museums, consider buying a 4-day pass to save money and skip some lines.\n*   **Metro is Key:** Paris is very walkable, but the Metro is efficient and affordable. Buy a \"carnet\" of tickets or use a contactless card.\n*   **Dining:** Look for \"Formule\" menus at lunch (fixed-price 2 or 3-course meals), which offer incredible value for high-quality food.\n\nEnjoy your Parisian adventure! Would you like help looking for specific hotels or more dining recommendations?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Bonjour! Planning a 5-day escape from London to the \\\"City of Light\\\" is a fantastic choice. Paris is a blend of world-class art, iconic architecture, and unparalleled culinary experiences. Here is your comprehensive mid-range travel guide and itinerary.\\n\\n---\\n\\n### **1. Getting from London to Paris**\\nSince you are starting in London, you have several convenient options. For a mid-range budget, the **Eurostar (Train)** is often the best balance of speed, cost, and comfort.\\n\\n*   **Train (Eurostar):** The fastest and most convenient way. Departing from St Pancras International, you'll arrive at Gare du Nord in about **2.5 hours**.\\n    *   *Price:* $50 - $150 USD (Book in advance for the best rates).\\n*   **Flight:** Frequent flights from London airports (LHR, LGW, LCY) to Paris (CDG, ORY).\\n    *   *Price:* $150 - $800 USD (Round-trip).\\n*   **Express Bus:** The most budget-friendly option, taking around 7-9 hours via the ferry or Channel Tunnel.\\n    *   *Price:* $25 - $60 USD.\\n\\n---\\n\\n### **2. Estimated 5-Day Budget (Mid-Range)**\\nFor a mid-range style, you can expect comfortable 3-star accommodations, a mix of bistro dining and casual eats, and entry into major attractions.\\n\\n*   **Total Estimated Budget:** **$836 USD** per person.\\n*   **Daily Average:** ~$167 USD.\\n\\n**Breakdown:**\\n*   **Accommodation:** $360 (4 nights at ~$90/night).\\n*   **Meals & Food:** $200 ($40/day for great croissants, lunches, and dinner).\\n*   **Sightseeing:** $125 (Museum passes and attraction tickets).\\n*   **Local Transport:** $75 (Metro/RER and occasional taxis).\\n*   **Contingency:** $76.\\n\\n---\\n\\n### **3. Suggested 5-Day Itinerary**\\n\\n#### **Day 1: Arrival & The Icons**\\n*   **Morning:** Arrive at Gare du Nord, check into your hotel, and grab a quick lunch.\\n*   **Afternoon:** Visit the **Eiffel Tower**. Be sure to book tickets in advance to head to the summit for panoramic views.\\n*   **Evening:** Enjoy a **Seine River Cruise** at sunset to see the city landmarks illuminated.\\n\\n#### **Day 2: Art & History**\\n*   **Morning:** Spend your morning at the **Louvre Museum**. Focus on the highlights like the Mona Lisa and Winged Victory (3-4 hours).\\n*   **Afternoon:** Walk through the Tuileries Garden toward the Place de la Concorde.\\n*   **Evening:** Explore the Latin Quarter for dinner\u2014it's full of lively, mid-range bistros.\\n\\n#### **Day 3: Gothic Splendor & Island Wandering**\\n*   **Morning:** Visit the **Notre-Dame Cathedral** (enjoy the exterior and the archaeological crypt) and the nearby Sainte-Chapelle for its stunning stained glass.\\n*   **Afternoon:** Wander the charming streets of **\u00cele Saint-Louis** and enjoy some famous Berthillon ice cream.\\n*   **Evening:** Explore the Marais district, known for its historic architecture and trendy boutiques.\\n\\n#### **Day 4: Luxury & Landmarks**\\n*   **Morning:** Walk the famous **Champs-\u00c9lys\u00e9es**, shopping and soaking in the atmosphere.\\n*   **Afternoon:** Reach the **Arc de Triomphe**. Climb to the top for a spectacular view of the twelve radiating avenues.\\n*   **Evening:** Catch a cabaret show or enjoy a classic French meal in the 8th arrondissement.\\n\\n#### **Day 5: Montmartre & Departure**\\n*   **Morning:** Head to the hilltop neighborhood of **Montmartre**. Visit the Sacr\u00e9-C\u0153ur Basilica and watch the artists in Place du Tertre.\\n*   **Afternoon:** Enjoy a final French caf\u00e9 lunch before heading back to the station/airport for your return to London.\\n\\n---\\n\\n### **Expert Tips for Your Trip:**\\n*   **The Paris Museum Pass:** If you plan on visiting many museums, consider buying a 4-day pass to save money and skip some lines.\\n*   **Metro is Key:** Paris is very walkable, but the Metro is efficient and affordable. Buy a \\\"carnet\\\" of tickets or use a contactless card.\\n*   **Dining:** Look for \\\"Formule\\\" menus at lunch (fixed-price 2 or 3-course meals), which offer incredible value for high-quality food.\\n\\nEnjoy your Parisian adventure! Would you like help looking for specific hotels or more dining recommendations?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"root_agent\": {\"agent_id\": \"root_agent\", \"agent_type\": \"LlmAgent\", \"description\": \"A helpful assistant that plans trips with itineraries, transportation options, and budget/pricing estimates.\", \"instruction\": \"You are an expert trip planner. Your job is to help users plan amazing trips to their desired destinations.\\nWhen a user provides a destination, origin, number of days, and/or travel preferences:\\n1. Suggest top places to visit using the 'get_places_to_visit' tool.\\n2. Provide possible transportation options from their origin or general travel options using the 'get_transportation_options' tool.\\n3. Offer an overall pricing estimate for their trip based on the destination, duration, and travel style (budget, mid-range, or luxury) using the 'get_overall_pricing_estimate' tool.\\n\\nSynthesize all this information into a beautifully structured, engaging, and professional travel itinerary and guide.\\nIf the user's query is simple or lacks details (like origin or travel style), politely ask for clarification or use sensible defaults/guesses while letting them know.\\nYou can also use 'get_current_time' if the user asks about the time in a city.\", \"tools\": [{\"function_declarations\": [{\"description\": \"Returns the current time in a specified city.\", \"name\": \"get_current_time\", \"parameters_json_schema\": {\"properties\": {\"city\": {\"title\": \"City\", \"type\": \"string\"}}, \"required\": [\"city\"], \"title\": \"get_current_timeParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Returns a list of top places to visit in a specified destination (city, country, or region).\\n\\nArgs:\\n    destination: The name of the destination, city, or country to visit.\\n\\nReturns:\\n    A dictionary containing the destination and a list of places to visit, each with details.\", \"name\": \"get_places_to_visit\", \"parameters_json_schema\": {\"properties\": {\"destination\": {\"title\": \"Destination\", \"type\": \"string\"}}, \"required\": [\"destination\"], \"title\": \"get_places_to_visitParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Returns a list of possible transportation options between the origin and destination.\\n\\nArgs:\\n    origin: The starting location of the trip.\\n    destination: The destination city, country, or place.\\n\\nReturns:\\n    A dictionary with status, origin, destination, and details of possible transportation options.\", \"name\": \"get_transportation_options\", \"parameters_json_schema\": {\"properties\": {\"origin\": {\"title\": \"Origin\", \"type\": \"string\"}, \"destination\": {\"title\": \"Destination\", \"type\": \"string\"}}, \"required\": [\"origin\", \"destination\"], \"title\": \"get_transportation_optionsParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Estimates overall pricing and budget breakdown for a trip of a given number of days to a destination.\\n\\nArgs:\\n    destination: The destination city, country, or place.\\n    days: The duration of the trip in days.\\n    travel_style: The style of travel. Choose from 'budget', 'mid-range', or 'luxury'.\\n\\nReturns:\\n    A dictionary containing the pricing breakdown, daily average cost, and total estimated budget.\", \"name\": \"get_overall_pricing_estimate\", \"parameters_json_schema\": {\"properties\": {\"destination\": {\"title\": \"Destination\", \"type\": \"string\"}, \"days\": {\"title\": \"Days\", \"type\": \"integer\"}, \"travel_style\": {\"title\": \"Travel Style\", \"type\": \"string\"}}, \"required\": [\"destination\", \"days\", \"travel_style\"], \"title\": \"get_overall_pricing_estimateParams\", \"type\": \"object\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"root_agent\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"5mnfgdss\", \"args\": {\"destination\": \"Paris\"}, \"name\": \"get_places_to_visit\"}}, {\"function_call\": {\"id\": \"7oa1d32q\", \"args\": {\"destination\": \"Paris\", \"origin\": \"London\"}, \"name\": \"get_transportation_options\"}}, {\"function_call\": {\"id\": \"21hk94zj\", \"args\": {\"travel_style\": \"mid-range\", \"days\": 5, \"destination\": \"Paris\"}, \"name\": \"get_overall_pricing_estimate\"}}], \"role\": \"model\"}}, {\"author\": \"root_agent\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"5mnfgdss\", \"name\": \"get_places_to_visit\", \"response\": {\"status\": \"success\", \"destination\": \"Paris\", \"places\": [{\"name\": \"Eiffel Tower\", \"description\": \"Iconic iron lattice tower on the Champ de Mars, offering panoramic city views.\", \"category\": \"Landmark\", \"recommended_duration\": \"2-3 hours\"}, {\"name\": \"Louvre Museum\", \"description\": \"The world's largest art museum, home to the Mona Lisa and Venus de Milo.\", \"category\": \"Museum / Culture\", \"recommended_duration\": \"3-4 hours\"}, {\"name\": \"Notre-Dame Cathedral\", \"description\": \"A masterpiece of French Gothic architecture, located on the \u00cele de la Cit\u00e9.\", \"category\": \"Historical / Religious\", \"recommended_duration\": \"1-2 hours\"}, {\"name\": \"Champs-\u00c9lys\u00e9es & Arc de Triomphe\", \"description\": \"Famous avenue lined with shops and cafes, culminating at the monumental triumphal arch.\", \"category\": \"Sightseeing\", \"recommended_duration\": \"1-2 hours\"}, {\"name\": \"Seine River Cruise\", \"description\": \"A scenic boat tour along the river Seine, passing under historic bridges.\", \"category\": \"Activity\", \"recommended_duration\": \"1 hour\"}]}}}, {\"function_response\": {\"id\": \"7oa1d32q\", \"name\": \"get_transportation_options\", \"response\": {\"status\": \"success\", \"origin\": \"London\", \"destination\": \"Paris\", \"transportation_options\": [{\"mode\": \"Flight\", \"description\": \"Direct or connecting commercial flights from London to nearest airport to Paris.\", \"estimated_duration\": \"2-12 hours depending on stops and route\", \"price_range_usd\": \"150 - 800 (economy round-trip)\", \"frequency\": \"Multiple daily options\"}, {\"mode\": \"Train\", \"description\": \"High-speed or regional train networks connecting the areas.\", \"estimated_duration\": \"3-8 hours depending on directness\", \"price_range_usd\": \"50 - 150\", \"frequency\": \"Several departures per day\"}, {\"mode\": \"Express Bus / Coach\", \"description\": \"Intercity budget bus service with comfortable amenities.\", \"estimated_duration\": \"5-12 hours depending on traffic\", \"price_range_usd\": \"25 - 60\", \"frequency\": \"Daily departures\"}, {\"mode\": \"Car Rental\", \"description\": \"Drive yourself via scenic highways.\", \"estimated_duration\": \"Varies (highly flexible)\", \"price_range_usd\": \"40 - 100 per day + fuel and toll costs\", \"frequency\": \"On-demand (unlimited flexibility)\"}]}}}, {\"function_response\": {\"id\": \"21hk94zj\", \"name\": \"get_overall_pricing_estimate\", \"response\": {\"status\": \"success\", \"destination\": \"Paris\", \"duration_days\": 5, \"travel_style\": \"mid-range\", \"average_cost_per_day_usd\": 167.2, \"estimated_grand_total_usd\": 836.0, \"breakdown\": {\"accommodation\": {\"rate_per_night_usd\": 90.0, \"nights\": 4, \"total_usd\": 360.0}, \"meals_and_food\": {\"rate_per_day_usd\": 40.0, \"days\": 5, \"total_usd\": 200.0}, \"activities_and_sightseeing\": {\"rate_per_day_usd\": 25.0, \"days\": 5, \"total_usd\": 125.0}, \"local_transportation\": {\"rate_per_day_usd\": 15.0, \"days\": 5, \"total_usd\": 75.0}, \"miscellaneous_contingency\": {\"percentage\": \"10%\", \"total_usd\": 76.0}}}}}], \"role\": \"user\"}}, {\"author\": \"root_agent\", \"content\": {\"parts\": [{\"text\": \"Bonjour! Planning a 5-day escape from London to the \\\"City of Light\\\" is a fantastic choice. Paris is a blend of world-class art, iconic architecture, and unparalleled culinary experiences. Here is your comprehensive mid-range travel guide and itinerary.\\n\\n---\\n\\n### **1. Getting from London to Paris**\\nSince you are starting in London, you have several convenient options. For a mid-range budget, the **Eurostar (Train)** is often the best balance of speed, cost, and comfort.\\n\\n*   **Train (Eurostar):** The fastest and most convenient way. Departing from St Pancras International, you'll arrive at Gare du Nord in about **2.5 hours**.\\n    *   *Price:* $50 - $150 USD (Book in advance for the best rates).\\n*   **Flight:** Frequent flights from London airports (LHR, LGW, LCY) to Paris (CDG, ORY).\\n    *   *Price:* $150 - $800 USD (Round-trip).\\n*   **Express Bus:** The most budget-friendly option, taking around 7-9 hours via the ferry or Channel Tunnel.\\n    *   *Price:* $25 - $60 USD.\\n\\n---\\n\\n### **2. Estimated 5-Day Budget (Mid-Range)**\\nFor a mid-range style, you can expect comfortable 3-star accommodations, a mix of bistro dining and casual eats, and entry into major attractions.\\n\\n*   **Total Estimated Budget:** **$836 USD** per person.\\n*   **Daily Average:** ~$167 USD.\\n\\n**Breakdown:**\\n*   **Accommodation:** $360 (4 nights at ~$90/night).\\n*   **Meals & Food:** $200 ($40/day for great croissants, lunches, and dinner).\\n*   **Sightseeing:** $125 (Museum passes and attraction tickets).\\n*   **Local Transport:** $75 (Metro/RER and occasional taxis).\\n*   **Contingency:** $76.\\n\\n---\\n\\n### **3. Suggested 5-Day Itinerary**\\n\\n#### **Day 1: Arrival & The Icons**\\n*   **Morning:** Arrive at Gare du Nord, check into your hotel, and grab a quick lunch.\\n*   **Afternoon:** Visit the **Eiffel Tower**. Be sure to book tickets in advance to head to the summit for panoramic views.\\n*   **Evening:** Enjoy a **Seine River Cruise** at sunset to see the city landmarks illuminated.\\n\\n#### **Day 2: Art & History**\\n*   **Morning:** Spend your morning at the **Louvre Museum**. Focus on the highlights like the Mona Lisa and Winged Victory (3-4 hours).\\n*   **Afternoon:** Walk through the Tuileries Garden toward the Place de la Concorde.\\n*   **Evening:** Explore the Latin Quarter for dinner\u2014it's full of lively, mid-range bistros.\\n\\n#### **Day 3: Gothic Splendor & Island Wandering**\\n*   **Morning:** Visit the **Notre-Dame Cathedral** (enjoy the exterior and the archaeological crypt) and the nearby Sainte-Chapelle for its stunning stained glass.\\n*   **Afternoon:** Wander the charming streets of **\u00cele Saint-Louis** and enjoy some famous Berthillon ice cream.\\n*   **Evening:** Explore the Marais district, known for its historic architecture and trendy boutiques.\\n\\n#### **Day 4: Luxury & Landmarks**\\n*   **Morning:** Walk the famous **Champs-\u00c9lys\u00e9es**, shopping and soaking in the atmosphere.\\n*   **Afternoon:** Reach the **Arc de Triomphe**. Climb to the top for a spectacular view of the twelve radiating avenues.\\n*   **Evening:** Catch a cabaret show or enjoy a classic French meal in the 8th arrondissement.\\n\\n#### **Day 5: Montmartre & Departure**\\n*   **Morning:** Head to the hilltop neighborhood of **Montmartre**. Visit the Sacr\u00e9-C\u0153ur Basilica and watch the artists in Place du Tertre.\\n*   **Afternoon:** Enjoy a final French caf\u00e9 lunch before heading back to the station/airport for your return to London.\\n\\n---\\n\\n### **Expert Tips for Your Trip:**\\n*   **The Paris Museum Pass:** If you plan on visiting many museums, consider buying a 4-day pass to save money and skip some lines.\\n*   **Metro is Key:** Paris is very walkable, but the Metro is efficient and affordable. Buy a \\\"carnet\\\" of tickets or use a contactless card.\\n*   **Dining:** Look for \\\"Formule\\\" menus at lunch (fixed-price 2 or 3-course meals), which offer incredible value for high-quality food.\\n\\nEnjoy your Parisian adventure! Would you like help looking for specific hotels or more dining recommendations?\"}], \"role\": \"model\"}}]}]}"
+      },
+      {
+        "prompt_display_text": "I want to go to Tokyo from New York for 7 days. Can you suggest transportation, sights, and estimate luxury pricing?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I want to go to Tokyo from New York for 7 days. Can you suggest transportation, sights, and estimate luxury pricing?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "This 7-day luxury itinerary for Tokyo is designed to blend Japan's rich tradition with its cutting-edge modernity, ensuring you experience the best of the city in style.\n\n### **Flight & Transportation: New York to Tokyo**\nFor a luxury journey from New York (JFK/EWR) to Tokyo (HND/NRT), flying is the only viable option.\n*   **Recommended Mode:** Direct Flight (approx. 14 hours).\n*   **Airlines:** For a premium experience, consider **Japan Airlines (JAL)** or **All Nippon Airways (ANA)**, consistently ranked among the world's best for their First and Business Class cabins.\n*   **Local Transport:** Once in Tokyo, private chauffeurs or the highly efficient \"Green Car\" (First Class) on Japanese trains are the preferred ways to navigate the city.\n\n---\n\n### **7-Day Luxury Tokyo Itinerary**\n\n**Day 1: Arrival & Ginza Glamour**\n*   Arrive in Tokyo and take a private transfer to your hotel.\n*   Spend the evening in **Ginza**, Tokyo\u2019s premier luxury shopping and dining district. \n*   *Dinner:* Experience high-end Edomae sushi at a Michelin-starred restaurant.\n\n**Day 2: Historic Asakusa & River Views**\n*   **Senso-ji Temple:** Visit Tokyo\u2019s oldest temple in the morning to avoid crowds. Wander through the Nakamise shopping street for traditional crafts.\n*   **Sumida River Cruise:** Charter a private water taxi or join a luxury cruise from Asakusa to Hama-rikyu Gardens.\n*   **Tokyo Skytree:** End the day with panoramic views of the city from the observation decks of the tallest structure in Japan.\n\n**Day 3: Electronics, Anime & Tech Culture**\n*   **Akihabara:** Dive into the world\u2019s center for electronics and otaku culture. Explore multi-story department stores or high-end collectible boutiques.\n*   **Evening:** Enjoy a private cocktail session in a Roppongi Hills \"sky bar\" overlooking the Tokyo Tower.\n\n**Day 4: Serenity & High-Fashion**\n*   **Meiji Jingu Shrine:** Start your day with a peaceful walk through the dense forest surrounding this sacred Shinto shrine.\n*   **Harajuku & Omotesando:** Walk from the shrine to Omotesando, often called Tokyo\u2019s \"Champs-\u00c9lys\u00e9es,\" featuring stunning architecture and luxury flagship stores.\n\n**Day 5: The Pulse of the City**\n*   **Shibuya Crossing:** Witness the world\u2019s busiest intersection. For a luxury vantage point, head to the **Shibuya Sky** observatory.\n*   **Afternoon:** Indulge in a traditional Japanese Tea Ceremony at a private teahouse.\n\n**Day 6: Art & Relaxation**\n*   **Mori Art Museum:** Visit this contemporary art museum in Roppongi Hills.\n*   **Spa & Wellness:** Spend the afternoon at your hotel\u2019s world-class spa (recommendations include the Aman or The Peninsula) for a traditional Shiatsu massage.\n\n**Day 7: Final Shopping & Departure**\n*   Spend your final morning picking up luxury souvenirs in Nihonbashi.\n*   Private transfer to the airport for your flight back to New York.\n\n---\n\n### **Luxury Pricing Estimate (7 Days)**\nBased on a luxury travel style, here is a breakdown of your estimated expenses (excluding international flights from New York):\n\n| Category | Estimated Cost (USD) |\n| :--- | :--- |\n| **Accommodation** (6 Nights) | $1,680 ($280/night) |\n| **Activities & Sightseeing** | $560 |\n| **Local Transportation** | $315 |\n| **Meals & Fine Dining** | $840 |\n| **Miscellaneous/Contingency** | $339.50 |\n| **Total Estimated Budget** | **$3,734.50** |\n\n*Note: For top-tier 5-star hotels (like the Park Hyatt or Aman Tokyo), accommodation costs may be significantly higher, often starting at $800\u2013$1,200 per night.*\n\n---\n\n### **Pro-Tips for Your Trip**\n*   **Reservations:** Many of Tokyo\u2019s top-tier restaurants and experiences require booking weeks or even months in advance. Utilize your hotel\u2019s concierge service.\n*   **Pocket Wi-Fi/SIM:** Even for luxury travelers, having a reliable high-speed data connection is essential for navigating the city.\n*   **Etiquette:** Learning a few basic Japanese phrases and understanding local bowing customs will go a long way in enhancing your cultural experience.\n\nEnjoy your incredible journey to the heart of Japan!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"This 7-day luxury itinerary for Tokyo is designed to blend Japan's rich tradition with its cutting-edge modernity, ensuring you experience the best of the city in style.\\n\\n### **Flight & Transportation: New York to Tokyo**\\nFor a luxury journey from New York (JFK/EWR) to Tokyo (HND/NRT), flying is the only viable option.\\n*   **Recommended Mode:** Direct Flight (approx. 14 hours).\\n*   **Airlines:** For a premium experience, consider **Japan Airlines (JAL)** or **All Nippon Airways (ANA)**, consistently ranked among the world's best for their First and Business Class cabins.\\n*   **Local Transport:** Once in Tokyo, private chauffeurs or the highly efficient \\\"Green Car\\\" (First Class) on Japanese trains are the preferred ways to navigate the city.\\n\\n---\\n\\n### **7-Day Luxury Tokyo Itinerary**\\n\\n**Day 1: Arrival & Ginza Glamour**\\n*   Arrive in Tokyo and take a private transfer to your hotel.\\n*   Spend the evening in **Ginza**, Tokyo\u2019s premier luxury shopping and dining district. \\n*   *Dinner:* Experience high-end Edomae sushi at a Michelin-starred restaurant.\\n\\n**Day 2: Historic Asakusa & River Views**\\n*   **Senso-ji Temple:** Visit Tokyo\u2019s oldest temple in the morning to avoid crowds. Wander through the Nakamise shopping street for traditional crafts.\\n*   **Sumida River Cruise:** Charter a private water taxi or join a luxury cruise from Asakusa to Hama-rikyu Gardens.\\n*   **Tokyo Skytree:** End the day with panoramic views of the city from the observation decks of the tallest structure in Japan.\\n\\n**Day 3: Electronics, Anime & Tech Culture**\\n*   **Akihabara:** Dive into the world\u2019s center for electronics and otaku culture. Explore multi-story department stores or high-end collectible boutiques.\\n*   **Evening:** Enjoy a private cocktail session in a Roppongi Hills \\\"sky bar\\\" overlooking the Tokyo Tower.\\n\\n**Day 4: Serenity & High-Fashion**\\n*   **Meiji Jingu Shrine:** Start your day with a peaceful walk through the dense forest surrounding this sacred Shinto shrine.\\n*   **Harajuku & Omotesando:** Walk from the shrine to Omotesando, often called Tokyo\u2019s \\\"Champs-\u00c9lys\u00e9es,\\\" featuring stunning architecture and luxury flagship stores.\\n\\n**Day 5: The Pulse of the City**\\n*   **Shibuya Crossing:** Witness the world\u2019s busiest intersection. For a luxury vantage point, head to the **Shibuya Sky** observatory.\\n*   **Afternoon:** Indulge in a traditional Japanese Tea Ceremony at a private teahouse.\\n\\n**Day 6: Art & Relaxation**\\n*   **Mori Art Museum:** Visit this contemporary art museum in Roppongi Hills.\\n*   **Spa & Wellness:** Spend the afternoon at your hotel\u2019s world-class spa (recommendations include the Aman or The Peninsula) for a traditional Shiatsu massage.\\n\\n**Day 7: Final Shopping & Departure**\\n*   Spend your final morning picking up luxury souvenirs in Nihonbashi.\\n*   Private transfer to the airport for your flight back to New York.\\n\\n---\\n\\n### **Luxury Pricing Estimate (7 Days)**\\nBased on a luxury travel style, here is a breakdown of your estimated expenses (excluding international flights from New York):\\n\\n| Category | Estimated Cost (USD) |\\n| :--- | :--- |\\n| **Accommodation** (6 Nights) | $1,680 ($280/night) |\\n| **Activities & Sightseeing** | $560 |\\n| **Local Transportation** | $315 |\\n| **Meals & Fine Dining** | $840 |\\n| **Miscellaneous/Contingency** | $339.50 |\\n| **Total Estimated Budget** | **$3,734.50** |\\n\\n*Note: For top-tier 5-star hotels (like the Park Hyatt or Aman Tokyo), accommodation costs may be significantly higher, often starting at $800\u2013$1,200 per night.*\\n\\n---\\n\\n### **Pro-Tips for Your Trip**\\n*   **Reservations:** Many of Tokyo\u2019s top-tier restaurants and experiences require booking weeks or even months in advance. Utilize your hotel\u2019s concierge service.\\n*   **Pocket Wi-Fi/SIM:** Even for luxury travelers, having a reliable high-speed data connection is essential for navigating the city.\\n*   **Etiquette:** Learning a few basic Japanese phrases and understanding local bowing customs will go a long way in enhancing your cultural experience.\\n\\nEnjoy your incredible journey to the heart of Japan!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"root_agent\": {\"agent_id\": \"root_agent\", \"agent_type\": \"LlmAgent\", \"description\": \"A helpful assistant that plans trips with itineraries, transportation options, and budget/pricing estimates.\", \"instruction\": \"You are an expert trip planner. Your job is to help users plan amazing trips to their desired destinations.\\nWhen a user provides a destination, origin, number of days, and/or travel preferences:\\n1. Suggest top places to visit using the 'get_places_to_visit' tool.\\n2. Provide possible transportation options from their origin or general travel options using the 'get_transportation_options' tool.\\n3. Offer an overall pricing estimate for their trip based on the destination, duration, and travel style (budget, mid-range, or luxury) using the 'get_overall_pricing_estimate' tool.\\n\\nSynthesize all this information into a beautifully structured, engaging, and professional travel itinerary and guide.\\nIf the user's query is simple or lacks details (like origin or travel style), politely ask for clarification or use sensible defaults/guesses while letting them know.\\nYou can also use 'get_current_time' if the user asks about the time in a city.\", \"tools\": [{\"function_declarations\": [{\"description\": \"Returns the current time in a specified city.\", \"name\": \"get_current_time\", \"parameters_json_schema\": {\"properties\": {\"city\": {\"title\": \"City\", \"type\": \"string\"}}, \"required\": [\"city\"], \"title\": \"get_current_timeParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Returns a list of top places to visit in a specified destination (city, country, or region).\\n\\nArgs:\\n    destination: The name of the destination, city, or country to visit.\\n\\nReturns:\\n    A dictionary containing the destination and a list of places to visit, each with details.\", \"name\": \"get_places_to_visit\", \"parameters_json_schema\": {\"properties\": {\"destination\": {\"title\": \"Destination\", \"type\": \"string\"}}, \"required\": [\"destination\"], \"title\": \"get_places_to_visitParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Returns a list of possible transportation options between the origin and destination.\\n\\nArgs:\\n    origin: The starting location of the trip.\\n    destination: The destination city, country, or place.\\n\\nReturns:\\n    A dictionary with status, origin, destination, and details of possible transportation options.\", \"name\": \"get_transportation_options\", \"parameters_json_schema\": {\"properties\": {\"origin\": {\"title\": \"Origin\", \"type\": \"string\"}, \"destination\": {\"title\": \"Destination\", \"type\": \"string\"}}, \"required\": [\"origin\", \"destination\"], \"title\": \"get_transportation_optionsParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Estimates overall pricing and budget breakdown for a trip of a given number of days to a destination.\\n\\nArgs:\\n    destination: The destination city, country, or place.\\n    days: The duration of the trip in days.\\n    travel_style: The style of travel. Choose from 'budget', 'mid-range', or 'luxury'.\\n\\nReturns:\\n    A dictionary containing the pricing breakdown, daily average cost, and total estimated budget.\", \"name\": \"get_overall_pricing_estimate\", \"parameters_json_schema\": {\"properties\": {\"destination\": {\"title\": \"Destination\", \"type\": \"string\"}, \"days\": {\"title\": \"Days\", \"type\": \"integer\"}, \"travel_style\": {\"title\": \"Travel Style\", \"type\": \"string\"}}, \"required\": [\"destination\", \"days\", \"travel_style\"], \"title\": \"get_overall_pricing_estimateParams\", \"type\": \"object\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"root_agent\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"vqy2aov0\", \"args\": {\"destination\": \"Tokyo\"}, \"name\": \"get_places_to_visit\"}}, {\"function_call\": {\"id\": \"geqv7lrn\", \"args\": {\"destination\": \"Tokyo\", \"origin\": \"New York\"}, \"name\": \"get_transportation_options\"}}, {\"function_call\": {\"id\": \"1iupj0bf\", \"args\": {\"days\": 7, \"travel_style\": \"luxury\", \"destination\": \"Tokyo\"}, \"name\": \"get_overall_pricing_estimate\"}}], \"role\": \"model\"}}, {\"author\": \"root_agent\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"vqy2aov0\", \"name\": \"get_places_to_visit\", \"response\": {\"status\": \"success\", \"destination\": \"Tokyo\", \"places\": [{\"name\": \"Senso-ji Temple\", \"description\": \"Tokyo's oldest and most significant Buddhist temple, located in Asakusa.\", \"category\": \"Historical / Religious\", \"recommended_duration\": \"1-2 hours\"}, {\"name\": \"Shibuya Crossing\", \"description\": \"The world's busiest pedestrian intersection, a vibrant symbol of modern Tokyo.\", \"category\": \"Landmark / Sightseeing\", \"recommended_duration\": \"1 hour\"}, {\"name\": \"Meiji Jingu Shrine\", \"description\": \"A serene Shinto shrine dedicated to Emperor Meiji, nestled in a dense forest.\", \"category\": \"Historical / Nature\", \"recommended_duration\": \"1-2 hours\"}, {\"name\": \"Tokyo Skytree\", \"description\": \"The tallest structure in Japan, offering breathtaking 360-degree views of the city.\", \"category\": \"Landmark\", \"recommended_duration\": \"1-2 hours\"}, {\"name\": \"Akihabara\", \"description\": \"The ultimate district for electronics, gaming, anime, and manga culture.\", \"category\": \"Shopping / Culture\", \"recommended_duration\": \"3-4 hours\"}]}}}, {\"function_response\": {\"id\": \"geqv7lrn\", \"name\": \"get_transportation_options\", \"response\": {\"status\": \"success\", \"origin\": \"New York\", \"destination\": \"Tokyo\", \"transportation_options\": [{\"mode\": \"Flight\", \"description\": \"Direct or connecting commercial flights from New York to nearest airport to Tokyo.\", \"estimated_duration\": \"2-12 hours depending on stops and route\", \"price_range_usd\": \"150 - 800 (economy round-trip)\", \"frequency\": \"Multiple daily options\"}, {\"mode\": \"Train\", \"description\": \"High-speed or regional train networks connecting the areas.\", \"estimated_duration\": \"3-8 hours depending on directness\", \"price_range_usd\": \"50 - 150\", \"frequency\": \"Several departures per day\"}, {\"mode\": \"Express Bus / Coach\", \"description\": \"Intercity budget bus service with comfortable amenities.\", \"estimated_duration\": \"5-12 hours depending on traffic\", \"price_range_usd\": \"25 - 60\", \"frequency\": \"Daily departures\"}, {\"mode\": \"Car Rental\", \"description\": \"Drive yourself via scenic highways.\", \"estimated_duration\": \"Varies (highly flexible)\", \"price_range_usd\": \"40 - 100 per day + fuel and toll costs\", \"frequency\": \"On-demand (unlimited flexibility)\"}]}}}, {\"function_response\": {\"id\": \"1iupj0bf\", \"name\": \"get_overall_pricing_estimate\", \"response\": {\"status\": \"success\", \"destination\": \"Tokyo\", \"duration_days\": 7, \"travel_style\": \"luxury\", \"average_cost_per_day_usd\": 533.5, \"estimated_grand_total_usd\": 3734.5, \"breakdown\": {\"accommodation\": {\"rate_per_night_usd\": 280.0, \"nights\": 6, \"total_usd\": 1680.0}, \"meals_and_food\": {\"rate_per_day_usd\": 120.0, \"days\": 7, \"total_usd\": 840.0}, \"activities_and_sightseeing\": {\"rate_per_day_usd\": 80.0, \"days\": 7, \"total_usd\": 560.0}, \"local_transportation\": {\"rate_per_day_usd\": 45.0, \"days\": 7, \"total_usd\": 315.0}, \"miscellaneous_contingency\": {\"percentage\": \"10%\", \"total_usd\": 339.5}}}}}], \"role\": \"user\"}}, {\"author\": \"root_agent\", \"content\": {\"parts\": [{\"text\": \"This 7-day luxury itinerary for Tokyo is designed to blend Japan's rich tradition with its cutting-edge modernity, ensuring you experience the best of the city in style.\\n\\n### **Flight & Transportation: New York to Tokyo**\\nFor a luxury journey from New York (JFK/EWR) to Tokyo (HND/NRT), flying is the only viable option.\\n*   **Recommended Mode:** Direct Flight (approx. 14 hours).\\n*   **Airlines:** For a premium experience, consider **Japan Airlines (JAL)** or **All Nippon Airways (ANA)**, consistently ranked among the world's best for their First and Business Class cabins.\\n*   **Local Transport:** Once in Tokyo, private chauffeurs or the highly efficient \\\"Green Car\\\" (First Class) on Japanese trains are the preferred ways to navigate the city.\\n\\n---\\n\\n### **7-Day Luxury Tokyo Itinerary**\\n\\n**Day 1: Arrival & Ginza Glamour**\\n*   Arrive in Tokyo and take a private transfer to your hotel.\\n*   Spend the evening in **Ginza**, Tokyo\u2019s premier luxury shopping and dining district. \\n*   *Dinner:* Experience high-end Edomae sushi at a Michelin-starred restaurant.\\n\\n**Day 2: Historic Asakusa & River Views**\\n*   **Senso-ji Temple:** Visit Tokyo\u2019s oldest temple in the morning to avoid crowds. Wander through the Nakamise shopping street for traditional crafts.\\n*   **Sumida River Cruise:** Charter a private water taxi or join a luxury cruise from Asakusa to Hama-rikyu Gardens.\\n*   **Tokyo Skytree:** End the day with panoramic views of the city from the observation decks of the tallest structure in Japan.\\n\\n**Day 3: Electronics, Anime & Tech Culture**\\n*   **Akihabara:** Dive into the world\u2019s center for electronics and otaku culture. Explore multi-story department stores or high-end collectible boutiques.\\n*   **Evening:** Enjoy a private cocktail session in a Roppongi Hills \\\"sky bar\\\" overlooking the Tokyo Tower.\\n\\n**Day 4: Serenity & High-Fashion**\\n*   **Meiji Jingu Shrine:** Start your day with a peaceful walk through the dense forest surrounding this sacred Shinto shrine.\\n*   **Harajuku & Omotesando:** Walk from the shrine to Omotesando, often called Tokyo\u2019s \\\"Champs-\u00c9lys\u00e9es,\\\" featuring stunning architecture and luxury flagship stores.\\n\\n**Day 5: The Pulse of the City**\\n*   **Shibuya Crossing:** Witness the world\u2019s busiest intersection. For a luxury vantage point, head to the **Shibuya Sky** observatory.\\n*   **Afternoon:** Indulge in a traditional Japanese Tea Ceremony at a private teahouse.\\n\\n**Day 6: Art & Relaxation**\\n*   **Mori Art Museum:** Visit this contemporary art museum in Roppongi Hills.\\n*   **Spa & Wellness:** Spend the afternoon at your hotel\u2019s world-class spa (recommendations include the Aman or The Peninsula) for a traditional Shiatsu massage.\\n\\n**Day 7: Final Shopping & Departure**\\n*   Spend your final morning picking up luxury souvenirs in Nihonbashi.\\n*   Private transfer to the airport for your flight back to New York.\\n\\n---\\n\\n### **Luxury Pricing Estimate (7 Days)**\\nBased on a luxury travel style, here is a breakdown of your estimated expenses (excluding international flights from New York):\\n\\n| Category | Estimated Cost (USD) |\\n| :--- | :--- |\\n| **Accommodation** (6 Nights) | $1,680 ($280/night) |\\n| **Activities & Sightseeing** | $560 |\\n| **Local Transportation** | $315 |\\n| **Meals & Fine Dining** | $840 |\\n| **Miscellaneous/Contingency** | $339.50 |\\n| **Total Estimated Budget** | **$3,734.50** |\\n\\n*Note: For top-tier 5-star hotels (like the Park Hyatt or Aman Tokyo), accommodation costs may be significantly higher, often starting at $800\u2013$1,200 per night.*\\n\\n---\\n\\n### **Pro-Tips for Your Trip**\\n*   **Reservations:** Many of Tokyo\u2019s top-tier restaurants and experiences require booking weeks or even months in advance. Utilize your hotel\u2019s concierge service.\\n*   **Pocket Wi-Fi/SIM:** Even for luxury travelers, having a reliable high-speed data connection is essential for navigating the city.\\n*   **Etiquette:** Learning a few basic Japanese phrases and understanding local bowing customs will go a long way in enhancing your cultural experience.\\n\\nEnjoy your incredible journey to the heart of Japan!\"}], \"role\": \"model\"}}]}]}"
+      },
+      {
+        "prompt_display_text": "Help me plan a budget-friendly 10-day trip to Japan.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Help me plan a budget-friendly 10-day trip to Japan.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "That sounds like an incredible trip! Japan is a beautiful destination where tradition and modernity blend seamlessly. Planning a 10-day budget-friendly trip is definitely doable with some smart choices around food and transportation.\n\nTo give you a starting point, I\u2019ve used **San Francisco** as a sample origin for flight prices, and focused on a **budget travel style** (think cozy hostels, delicious \"konbini\" convenience store meals, and local transport).\n\n### \ud83d\udcb0 Budget Estimate (10 Days)\n*   **Total Estimated Budget:** ~$660 USD (excluding international flights)\n*   **Daily Average:** ~$66 USD\n*   **Breakdown:**\n    *   **Accommodation:** $270 (Hostels or capsule hotels)\n    *   **Food:** $150 (Mix of street food, ramen shops, and 7-Eleven/Lawson meals)\n    *   **Transport:** $80 (Local trains and buses)\n    *   **Activities:** $100 (Many shrines and parks are free or low-cost)\n\n---\n\n### \ud83d\uddfa\ufe0f Your 10-Day Budget Itinerary\n\n**Days 1-3: Tokyo \u2013 The Neon Metropolis**\n*   **Must See:** **Shibuya Crossing**. Experience the world's busiest intersection and the nearby Hachiko Statue.\n*   **Budget Tip:** Explore the free observation deck at the Tokyo Metropolitan Government Building instead of paying for Tokyo Skytree.\n*   **Activity:** Wander through the trendy streets of Harajuku and the peaceful Meiji Shrine.\n\n**Days 4-5: Mount Fuji & Hakone**\n*   **Must See:** **Mount Fuji**. Take a budget-friendly highway bus from Shinjuku to the Fuji Five Lakes area.\n*   **Activity:** Use the Hakone Free Pass (a great value) for cable cars and pirate ship cruises across Lake Ashi with views of Fuji.\n\n**Days 6-8: Kyoto & Nara \u2013 Old Japan**\n*   **Must See (Kyoto):** **Fushimi Inari-taisha Shrine**. Hike through the thousands of iconic orange torii gates (Free!).\n*   **Must See (Nara):** **Todai-ji Temple**. See the massive Great Buddha and hang out with the famous wild deer in the park.\n*   **Budget Tip:** Kyoto is very walkable and bike-friendly. Renting a bicycle is often cheaper than the bus.\n\n**Day 9: Hiroshima \u2013 History & Peace**\n*   **Must See:** **Hiroshima Peace Memorial Park**. A moving and essential historical site.\n*   **Travel Tip:** Consider a night bus from Kyoto to Hiroshima and back to Tokyo to save on a night of accommodation and expensive Shinkansen (bullet train) tickets.\n\n**Day 10: Tokyo Departure**\n*   Head back to Tokyo for some last-minute souvenir shopping at Don Quijote (a budget paradise) before your flight.\n\n---\n\n### \u2708\ufe0f Transportation Options\n*   **International Flights:** From San Francisco, flights typically range from **$150 - $800** depending on the season and how early you book.\n*   **Internal Travel:** \n    *   **Express Buses:** The most budget-friendly way to travel between cities (e.g., Tokyo to Kyoto).\n    *   **Local Trains:** Slower than the Bullet Train, but significantly cheaper.\n    *   **Walking:** Many of Japan's best sights are grouped together\u2014bring comfortable shoes!\n\n### \ud83d\udca1 Expert Tips for Your Budget Trip:\n1.  **Eat at \"Konbini\":** Japanese convenience stores (7-Eleven, Lawson, FamilyMart) offer high-quality, delicious meals like onigiri and bento boxes for just a few dollars.\n2.  **Get a Welcome Suica/Pasmo Card:** These rechargeable cards make taking local subways seamless.\n3.  **Drink from Vending Machines:** They are everywhere and offer affordable hot or cold drinks.\n\n**Would you like me to adjust this based on a specific departure city or refine the activities to a specific interest (like anime, food, or hiking)?**",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"That sounds like an incredible trip! Japan is a beautiful destination where tradition and modernity blend seamlessly. Planning a 10-day budget-friendly trip is definitely doable with some smart choices around food and transportation.\\n\\nTo give you a starting point, I\u2019ve used **San Francisco** as a sample origin for flight prices, and focused on a **budget travel style** (think cozy hostels, delicious \\\"konbini\\\" convenience store meals, and local transport).\\n\\n### \ud83d\udcb0 Budget Estimate (10 Days)\\n*   **Total Estimated Budget:** ~$660 USD (excluding international flights)\\n*   **Daily Average:** ~$66 USD\\n*   **Breakdown:**\\n    *   **Accommodation:** $270 (Hostels or capsule hotels)\\n    *   **Food:** $150 (Mix of street food, ramen shops, and 7-Eleven/Lawson meals)\\n    *   **Transport:** $80 (Local trains and buses)\\n    *   **Activities:** $100 (Many shrines and parks are free or low-cost)\\n\\n---\\n\\n### \ud83d\uddfa\ufe0f Your 10-Day Budget Itinerary\\n\\n**Days 1-3: Tokyo \u2013 The Neon Metropolis**\\n*   **Must See:** **Shibuya Crossing**. Experience the world's busiest intersection and the nearby Hachiko Statue.\\n*   **Budget Tip:** Explore the free observation deck at the Tokyo Metropolitan Government Building instead of paying for Tokyo Skytree.\\n*   **Activity:** Wander through the trendy streets of Harajuku and the peaceful Meiji Shrine.\\n\\n**Days 4-5: Mount Fuji & Hakone**\\n*   **Must See:** **Mount Fuji**. Take a budget-friendly highway bus from Shinjuku to the Fuji Five Lakes area.\\n*   **Activity:** Use the Hakone Free Pass (a great value) for cable cars and pirate ship cruises across Lake Ashi with views of Fuji.\\n\\n**Days 6-8: Kyoto & Nara \u2013 Old Japan**\\n*   **Must See (Kyoto):** **Fushimi Inari-taisha Shrine**. Hike through the thousands of iconic orange torii gates (Free!).\\n*   **Must See (Nara):** **Todai-ji Temple**. See the massive Great Buddha and hang out with the famous wild deer in the park.\\n*   **Budget Tip:** Kyoto is very walkable and bike-friendly. Renting a bicycle is often cheaper than the bus.\\n\\n**Day 9: Hiroshima \u2013 History & Peace**\\n*   **Must See:** **Hiroshima Peace Memorial Park**. A moving and essential historical site.\\n*   **Travel Tip:** Consider a night bus from Kyoto to Hiroshima and back to Tokyo to save on a night of accommodation and expensive Shinkansen (bullet train) tickets.\\n\\n**Day 10: Tokyo Departure**\\n*   Head back to Tokyo for some last-minute souvenir shopping at Don Quijote (a budget paradise) before your flight.\\n\\n---\\n\\n### \u2708\ufe0f Transportation Options\\n*   **International Flights:** From San Francisco, flights typically range from **$150 - $800** depending on the season and how early you book.\\n*   **Internal Travel:** \\n    *   **Express Buses:** The most budget-friendly way to travel between cities (e.g., Tokyo to Kyoto).\\n    *   **Local Trains:** Slower than the Bullet Train, but significantly cheaper.\\n    *   **Walking:** Many of Japan's best sights are grouped together\u2014bring comfortable shoes!\\n\\n### \ud83d\udca1 Expert Tips for Your Budget Trip:\\n1.  **Eat at \\\"Konbini\\\":** Japanese convenience stores (7-Eleven, Lawson, FamilyMart) offer high-quality, delicious meals like onigiri and bento boxes for just a few dollars.\\n2.  **Get a Welcome Suica/Pasmo Card:** These rechargeable cards make taking local subways seamless.\\n3.  **Drink from Vending Machines:** They are everywhere and offer affordable hot or cold drinks.\\n\\n**Would you like me to adjust this based on a specific departure city or refine the activities to a specific interest (like anime, food, or hiking)?**\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"root_agent\": {\"agent_id\": \"root_agent\", \"agent_type\": \"LlmAgent\", \"description\": \"A helpful assistant that plans trips with itineraries, transportation options, and budget/pricing estimates.\", \"instruction\": \"You are an expert trip planner. Your job is to help users plan amazing trips to their desired destinations.\\nWhen a user provides a destination, origin, number of days, and/or travel preferences:\\n1. Suggest top places to visit using the 'get_places_to_visit' tool.\\n2. Provide possible transportation options from their origin or general travel options using the 'get_transportation_options' tool.\\n3. Offer an overall pricing estimate for their trip based on the destination, duration, and travel style (budget, mid-range, or luxury) using the 'get_overall_pricing_estimate' tool.\\n\\nSynthesize all this information into a beautifully structured, engaging, and professional travel itinerary and guide.\\nIf the user's query is simple or lacks details (like origin or travel style), politely ask for clarification or use sensible defaults/guesses while letting them know.\\nYou can also use 'get_current_time' if the user asks about the time in a city.\", \"tools\": [{\"function_declarations\": [{\"description\": \"Returns the current time in a specified city.\", \"name\": \"get_current_time\", \"parameters_json_schema\": {\"properties\": {\"city\": {\"title\": \"City\", \"type\": \"string\"}}, \"required\": [\"city\"], \"title\": \"get_current_timeParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Returns a list of top places to visit in a specified destination (city, country, or region).\\n\\nArgs:\\n    destination: The name of the destination, city, or country to visit.\\n\\nReturns:\\n    A dictionary containing the destination and a list of places to visit, each with details.\", \"name\": \"get_places_to_visit\", \"parameters_json_schema\": {\"properties\": {\"destination\": {\"title\": \"Destination\", \"type\": \"string\"}}, \"required\": [\"destination\"], \"title\": \"get_places_to_visitParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Returns a list of possible transportation options between the origin and destination.\\n\\nArgs:\\n    origin: The starting location of the trip.\\n    destination: The destination city, country, or place.\\n\\nReturns:\\n    A dictionary with status, origin, destination, and details of possible transportation options.\", \"name\": \"get_transportation_options\", \"parameters_json_schema\": {\"properties\": {\"origin\": {\"title\": \"Origin\", \"type\": \"string\"}, \"destination\": {\"title\": \"Destination\", \"type\": \"string\"}}, \"required\": [\"origin\", \"destination\"], \"title\": \"get_transportation_optionsParams\", \"type\": \"object\"}}]}, {\"function_declarations\": [{\"description\": \"Estimates overall pricing and budget breakdown for a trip of a given number of days to a destination.\\n\\nArgs:\\n    destination: The destination city, country, or place.\\n    days: The duration of the trip in days.\\n    travel_style: The style of travel. Choose from 'budget', 'mid-range', or 'luxury'.\\n\\nReturns:\\n    A dictionary containing the pricing breakdown, daily average cost, and total estimated budget.\", \"name\": \"get_overall_pricing_estimate\", \"parameters_json_schema\": {\"properties\": {\"destination\": {\"title\": \"Destination\", \"type\": \"string\"}, \"days\": {\"title\": \"Days\", \"type\": \"integer\"}, \"travel_style\": {\"title\": \"Travel Style\", \"type\": \"string\"}}, \"required\": [\"destination\", \"days\", \"travel_style\"], \"title\": \"get_overall_pricing_estimateParams\", \"type\": \"object\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"root_agent\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"y0dvk0ck\", \"args\": {\"destination\": \"Japan\"}, \"name\": \"get_places_to_visit\"}}, {\"function_call\": {\"id\": \"br2qvogq\", \"args\": {\"destination\": \"Japan\", \"travel_style\": \"budget\", \"days\": 10}, \"name\": \"get_overall_pricing_estimate\"}}, {\"function_call\": {\"id\": \"j19ccnrl\", \"args\": {\"origin\": \"San Francisco, USA\", \"destination\": \"Tokyo, Japan\"}, \"name\": \"get_transportation_options\"}}], \"role\": \"model\"}}, {\"author\": \"root_agent\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"y0dvk0ck\", \"name\": \"get_places_to_visit\", \"response\": {\"status\": \"success\", \"destination\": \"Japan\", \"places\": [{\"name\": \"Fushimi Inari-taisha Shrine (Kyoto)\", \"description\": \"Famous shrine known for its path of thousands of vibrant orange torii gates.\", \"category\": \"Historical / Religious\", \"recommended_duration\": \"2-3 hours\"}, {\"name\": \"Mount Fuji\", \"description\": \"Japan's iconic snow-capped volcanic peak, a sacred and scenic masterpiece.\", \"category\": \"Nature\", \"recommended_duration\": \"1 day\"}, {\"name\": \"Todai-ji Temple (Nara)\", \"description\": \"Massive temple housing one of Japan's largest bronze Buddha statues, surrounded by free-roaming deer.\", \"category\": \"Historical\", \"recommended_duration\": \"2 hours\"}, {\"name\": \"Shibuya Crossing (Tokyo)\", \"description\": \"The iconic multi-way crosswalk representing modern Japanese urban energy.\", \"category\": \"Landmark\", \"recommended_duration\": \"1 hour\"}, {\"name\": \"Hiroshima Peace Memorial Park\", \"description\": \"A deeply moving memorial park dedicated to legacy of the atomic bomb and world peace.\", \"category\": \"Historical\", \"recommended_duration\": \"2 hours\"}]}}}, {\"function_response\": {\"id\": \"br2qvogq\", \"name\": \"get_overall_pricing_estimate\", \"response\": {\"status\": \"success\", \"destination\": \"Japan\", \"duration_days\": 10, \"travel_style\": \"budget\", \"average_cost_per_day_usd\": 66.0, \"estimated_grand_total_usd\": 660.0, \"breakdown\": {\"accommodation\": {\"rate_per_night_usd\": 30.0, \"nights\": 9, \"total_usd\": 270.0}, \"meals_and_food\": {\"rate_per_day_usd\": 15.0, \"days\": 10, \"total_usd\": 150.0}, \"activities_and_sightseeing\": {\"rate_per_day_usd\": 10.0, \"days\": 10, \"total_usd\": 100.0}, \"local_transportation\": {\"rate_per_day_usd\": 8.0, \"days\": 10, \"total_usd\": 80.0}, \"miscellaneous_contingency\": {\"percentage\": \"10%\", \"total_usd\": 60.0}}}}}, {\"function_response\": {\"id\": \"j19ccnrl\", \"name\": \"get_transportation_options\", \"response\": {\"status\": \"success\", \"origin\": \"San Francisco, USA\", \"destination\": \"Tokyo, Japan\", \"transportation_options\": [{\"mode\": \"Flight\", \"description\": \"Direct or connecting commercial flights from San Francisco, USA to nearest airport to Tokyo, Japan.\", \"estimated_duration\": \"2-12 hours depending on stops and route\", \"price_range_usd\": \"150 - 800 (economy round-trip)\", \"frequency\": \"Multiple daily options\"}, {\"mode\": \"Train\", \"description\": \"High-speed or regional train networks connecting the areas.\", \"estimated_duration\": \"3-8 hours depending on directness\", \"price_range_usd\": \"50 - 150\", \"frequency\": \"Several departures per day\"}, {\"mode\": \"Express Bus / Coach\", \"description\": \"Intercity budget bus service with comfortable amenities.\", \"estimated_duration\": \"5-12 hours depending on traffic\", \"price_range_usd\": \"25 - 60\", \"frequency\": \"Daily departures\"}, {\"mode\": \"Car Rental\", \"description\": \"Drive yourself via scenic highways.\", \"estimated_duration\": \"Varies (highly flexible)\", \"price_range_usd\": \"40 - 100 per day + fuel and toll costs\", \"frequency\": \"On-demand (unlimited flexibility)\"}]}}}], \"role\": \"user\"}}, {\"author\": \"root_agent\", \"content\": {\"parts\": [{\"text\": \"That sounds like an incredible trip! Japan is a beautiful destination where tradition and modernity blend seamlessly. Planning a 10-day budget-friendly trip is definitely doable with some smart choices around food and transportation.\\n\\nTo give you a starting point, I\u2019ve used **San Francisco** as a sample origin for flight prices, and focused on a **budget travel style** (think cozy hostels, delicious \\\"konbini\\\" convenience store meals, and local transport).\\n\\n### \ud83d\udcb0 Budget Estimate (10 Days)\\n*   **Total Estimated Budget:** ~$660 USD (excluding international flights)\\n*   **Daily Average:** ~$66 USD\\n*   **Breakdown:**\\n    *   **Accommodation:** $270 (Hostels or capsule hotels)\\n    *   **Food:** $150 (Mix of street food, ramen shops, and 7-Eleven/Lawson meals)\\n    *   **Transport:** $80 (Local trains and buses)\\n    *   **Activities:** $100 (Many shrines and parks are free or low-cost)\\n\\n---\\n\\n### \ud83d\uddfa\ufe0f Your 10-Day Budget Itinerary\\n\\n**Days 1-3: Tokyo \u2013 The Neon Metropolis**\\n*   **Must See:** **Shibuya Crossing**. Experience the world's busiest intersection and the nearby Hachiko Statue.\\n*   **Budget Tip:** Explore the free observation deck at the Tokyo Metropolitan Government Building instead of paying for Tokyo Skytree.\\n*   **Activity:** Wander through the trendy streets of Harajuku and the peaceful Meiji Shrine.\\n\\n**Days 4-5: Mount Fuji & Hakone**\\n*   **Must See:** **Mount Fuji**. Take a budget-friendly highway bus from Shinjuku to the Fuji Five Lakes area.\\n*   **Activity:** Use the Hakone Free Pass (a great value) for cable cars and pirate ship cruises across Lake Ashi with views of Fuji.\\n\\n**Days 6-8: Kyoto & Nara \u2013 Old Japan**\\n*   **Must See (Kyoto):** **Fushimi Inari-taisha Shrine**. Hike through the thousands of iconic orange torii gates (Free!).\\n*   **Must See (Nara):** **Todai-ji Temple**. See the massive Great Buddha and hang out with the famous wild deer in the park.\\n*   **Budget Tip:** Kyoto is very walkable and bike-friendly. Renting a bicycle is often cheaper than the bus.\\n\\n**Day 9: Hiroshima \u2013 History & Peace**\\n*   **Must See:** **Hiroshima Peace Memorial Park**. A moving and essential historical site.\\n*   **Travel Tip:** Consider a night bus from Kyoto to Hiroshima and back to Tokyo to save on a night of accommodation and expensive Shinkansen (bullet train) tickets.\\n\\n**Day 10: Tokyo Departure**\\n*   Head back to Tokyo for some last-minute souvenir shopping at Don Quijote (a budget paradise) before your flight.\\n\\n---\\n\\n### \u2708\ufe0f Transportation Options\\n*   **International Flights:** From San Francisco, flights typically range from **$150 - $800** depending on the season and how early you book.\\n*   **Internal Travel:** \\n    *   **Express Buses:** The most budget-friendly way to travel between cities (e.g., Tokyo to Kyoto).\\n    *   **Local Trains:** Slower than the Bullet Train, but significantly cheaper.\\n    *   **Walking:** Many of Japan's best sights are grouped together\u2014bring comfortable shoes!\\n\\n### \ud83d\udca1 Expert Tips for Your Budget Trip:\\n1.  **Eat at \\\"Konbini\\\":** Japanese convenience stores (7-Eleven, Lawson, FamilyMart) offer high-quality, delicious meals like onigiri and bento boxes for just a few dollars.\\n2.  **Get a Welcome Suica/Pasmo Card:** These rechargeable cards make taking local subways seamless.\\n3.  **Drink from Vending Machines:** They are everywhere and offer affordable hot or cold drinks.\\n\\n**Would you like me to adjust this based on a specific departure city or refine the activities to a specific interest (like anime, food, or hiking)?**\"}], \"role\": \"model\"}}]}]}"
+      }
+    ]
+  },
+  "agent_info": null
+}
