@@ -5,8 +5,9 @@ region: "us-east1"
 base_template: "local_trip_planner"
 generated_at: "2026-07-10T06:40:28.816059+00:00"
 language: "python"
+deployment_target: "agent_runtime"
 create_params:
-  deployment_target: "none"
+  deployment_target: "agent_runtime"
   session_type: "in_memory"
   cicd_runner: "skip"
   include_data_ingestion: false

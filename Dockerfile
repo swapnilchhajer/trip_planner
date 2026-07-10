@@ -20,7 +20,8 @@ WORKDIR /code
 
 COPY ./pyproject.toml ./README.md ./uv.lock* ./
 
-COPY ./trip_planner ./trip_planner
+COPY ./__init__.py ./agent.py ./tools.py ./fast_api_app.py ./
+COPY ./app_utils ./app_utils
 
 RUN uv sync --frozen
 
@@ -32,4 +33,4 @@ ENV AGENT_VERSION=${AGENT_VERSION}
 
 EXPOSE 8080
 
-CMD ["uv", "run", "uvicorn", "trip_planner.fast_api_app:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uv", "run", "uvicorn", "fast_api_app:app", "--host", "0.0.0.0", "--port", "8080"]
