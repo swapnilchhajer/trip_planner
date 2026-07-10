@@ -62,7 +62,6 @@ def start_server() -> subprocess.Popen[str]:
         "-m",
         "uvicorn",
         "fast_api_app:app",
-
         "--host",
         "0.0.0.0",
         "--port",

@@ -20,7 +20,6 @@ from google.genai import types
 from agent import root_agent
 
 
-
 def test_agent_stream() -> None:
     """
     Integration test for the agent stream functionality.
